@@ -32,7 +32,7 @@ conda create -n ha-rmappo python=3.10
 conda activate ha-rmappo
 pip install -r requirements.txt
 ```
-(Ensure PyTorch with CUDA/MPS support is installed according to the target platform.)
+(Ensure PyTorch 2.1.0 with CUDA/MPS support is installed according to the target platform. Full dependency list with pinned versions is in `docs/requirements.md`.)
 
 ### 2. Stage‑1 Training (truth-based curriculum start)
 Run either the shell wrapper or the Python entry point:

@@ -6,8 +6,8 @@ set -euo pipefail
 # ----------------------------
 
 ALGO=${ALGO:-rmappo}            # rmappo / mappo / ippo
-DEFENDERS=${DEFENDERS:-7}       # number of defenders (e.g., 5 for 5v2)
-INTRUDERS=${INTRUDERS:-3}       # number of intruders (e.g., 2 for 5v2)
+DEFENDERS=${DEFENDERS:-5}       # number of defenders (e.g., 5 for 5v2)
+INTRUDERS=${INTRUDERS:-2}       # number of intruders (e.g., 2 for 5v2)
 RUN_ID=${RUN_ID:-}              # optional run identifier used during training
 EPISODES=${EPISODES:-5}         # number of episodes to render
 OUTPUT_DIR=${OUTPUT_DIR:-render_output/stage1}

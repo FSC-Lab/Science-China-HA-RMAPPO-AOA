@@ -48,8 +48,8 @@ DEFAULT_PLOT_CONFIG = {
     "algorithms": ["rmappo", "mappo", "ippo"],
     "metrics": DEFAULT_METRICS,
     "stage": 2,
-    "defenders": 2,
-    "intruders": 1,
+    "defenders": 7,
+    "intruders": 3,
     "run_ids": [""],
     "results_root": "results/MPE",
     "output": "plots/stage{stage}_{defenders}v{intruders}_comparison",
@@ -69,10 +69,10 @@ COLOR_MAP = {
 }
 
 LINE_WIDTH = {
-    "rmappo": 2.5,
-    "mappo": 1.8,
-    "ippo": 1.2,
-    "random": 1.0,
+    "rmappo": 4.0,
+    "mappo": 2.0,
+    "ippo": 1.0,
+    "random": 0.8,
 }
 
 

@@ -22,6 +22,7 @@ ELLIPSE_INTERVAL=${ELLIPSE_INTERVAL:-5}
 ELLIPSE_SIGMA=${ELLIPSE_SIGMA:-3.0}
 RESULTS_ROOT=${RESULTS_ROOT:-results/MPE}
 MODEL_DIR=${MODEL_DIR:-}
+CSV=${CSV:-true}                # set to false to skip CSV export
 
 ARGS=(
   --algo ${ALGO}
@@ -53,6 +54,10 @@ fi
 
 if [ "${PDF}" = "true" ]; then
   ARGS+=(--pdf)
+fi
+
+if [ "${CSV}" = "true" ]; then
+  ARGS+=(--csv)
 fi
 
 python scripts/render/render_protected_zone_stage2.py "${ARGS[@]}"

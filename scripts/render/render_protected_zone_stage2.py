@@ -5,6 +5,7 @@ Adds confidence ellipses for intruder posteriors in both PNG and GIF outputs.
 """
 
 import argparse
+import csv
 import math
 import os
 from pathlib import Path
@@ -73,6 +74,8 @@ def parse_args() -> argparse.Namespace:
                         help="Sigma multiplier for confidence ellipse radius (default 3σ ≈ 99.7% coverage).")
     parser.add_argument("--pdf", action="store_true",
                         help="Also export vector PDF for publication-quality figures.")
+    parser.add_argument("--csv", action="store_true",
+                        help="If set, export per-step trajectories and ellipse parameters as CSV.")
     parser.add_argument("--legend_fontsize", type=float, default=10.0,
                         help="Legend font size for rendered figures.")
     parser.add_argument("--label_fontsize", type=float, default=10.0,
@@ -138,14 +141,14 @@ def configure_env(args: argparse.Namespace) -> Tuple[object, object]:
 
     # CPF / threat defaults (match training script)
     cfg.cpf_num_particles = 512
-    cfg.cpf_sigma_a = 0.3
-    cfg.bearing_sigma0 = 0.02
+    cfg.cpf_sigma_a = 0.2
+    cfg.bearing_sigma0 = 0.0262
     cfg.bearing_r0 = 0.5
-    cfg.threat_lambda = 0.05
-    cfg.threat_tau_max = 60.0
+    cfg.threat_lambda = 0.15
+    cfg.threat_tau_max = 30.0
     cfg.threat_tau_step = 1.0
-    cfg.tau_switch = 6.0
-    cfg.s1_logdet_weight = 1.0
+    cfg.tau_switch = 3.0
+    cfg.s1_logdet_weight = 0.5
     cfg.s2_delta_weight = 1.0
     cfg.intruder_sense_radius = 1.0
     cfg.intruder_max_neighbors = 2
@@ -172,8 +175,8 @@ def configure_env(args: argparse.Namespace) -> Tuple[object, object]:
     cfg.use_popart = False
     cfg.use_valuenorm = True
     cfg.use_policy_active_masks = True
-    cfg.lr = 5e-4
-    cfg.critic_lr = 5e-4
+    cfg.lr = 3e-4
+    cfg.critic_lr = 3e-4
     cfg.opti_eps = 1e-5
     cfg.weight_decay = 0.0
     cfg.gain = 0.01
@@ -442,18 +445,19 @@ def draw_static_episode(ax, data, cfg, args, episode_idx):
                         linestyle="--", alpha=0.9)
         if handles_def_traj is None:
             handles_def_traj = line
-        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["defender"], s=args.marker_size**2, marker="o")
-        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["defender"], s=args.marker_size**2, marker="s")
+        scatter_size = (args.marker_size * 1.3) ** 2
+        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["defender"], s=scatter_size, marker="o")
+        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["defender"], s=scatter_size, marker="s")
 
     for traj in data["traj_int"]:
         if traj.size == 0:
             continue
         line, = ax.plot(traj[:, 0], traj[:, 1], color=COLORS["intruder_traj"], linewidth=args.linewidth,
-                        linestyle="--", alpha=0.9)
+                        linestyle="-", alpha=0.9)
         if handles_intr_traj is None:
             handles_intr_traj = line
-        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["intruder"], s=args.marker_size**2, marker="o")
-        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["intruder"], s=args.marker_size**2, marker="^")
+        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["intruder"], s=scatter_size, marker="o")
+        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["intruder"], s=scatter_size, marker="^")
 
     if data["ellipses"]:
         if len(data["ellipses"]) > 0:
@@ -511,7 +515,7 @@ def draw_static_episode(ax, data, cfg, args, episode_idx):
 
     labels = legend_entries
     legend_size = getattr(args, "legend_fontsize", 13.0)
-    ax.legend(handles=handles, labels=labels, loc="upper right", fontsize=legend_size, frameon=True,
+    ax.legend(handles=handles, labels=labels, loc="best", fontsize=legend_size, frameon=True,
               handler_map={tuple: HandlerTuple(ndivide=None)})
 
 
@@ -543,6 +547,73 @@ def render_gif(frames: List[Dict[str, np.ndarray]], cfg, args, save_path: Path):
     imageio.mimsave(save_path, images, fps=args.gif_fps)
 
 
+def export_csv(episode_data: Dict[str, List], args, output_root: Path, episode_idx: int) -> Path:
+    csv_path = output_root / f"{args.algo}_{args.defenders}v{args.intruders}_stage2_ep{episode_idx + 1:02d}.csv"
+    frames = episode_data.get("frames", [])
+    with csv_path.open("w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "episode",
+            "step",
+            "category",
+            "entity_type",
+            "entity_index",
+            "x",
+            "y",
+            "ellipse_width",
+            "ellipse_height",
+            "ellipse_angle_deg",
+        ])
+        for step, frame in enumerate(frames):
+            def_positions = np.asarray(frame.get("def", []))
+            intr_positions = np.asarray(frame.get("intr", []))
+            ellipses = frame.get("ellipses", [])
+
+            for idx, pos in enumerate(def_positions):
+                writer.writerow([
+                    episode_idx + 1,
+                    step,
+                    "agent",
+                    "defender",
+                    idx,
+                    float(pos[0]),
+                    float(pos[1]),
+                    "",
+                    "",
+                    "",
+                ])
+
+            for idx, pos in enumerate(intr_positions):
+                writer.writerow([
+                    episode_idx + 1,
+                    step,
+                    "agent",
+                    "intruder",
+                    idx,
+                    float(pos[0]),
+                    float(pos[1]),
+                    "",
+                    "",
+                    "",
+                ])
+
+            for idx, ellipse in enumerate(ellipses):
+                center, width, height, angle = ellipse
+                writer.writerow([
+                    episode_idx + 1,
+                    step,
+                    "ellipse",
+                    "intruder",
+                    idx,
+                    float(center[0]),
+                    float(center[1]),
+                    float(width),
+                    float(height),
+                    float(angle),
+                ])
+    return csv_path
+
+
 def main():
     args = parse_args()
     output_root = Path(args.output_dir)
@@ -572,6 +643,10 @@ def main():
             gif_path = output_root / f"{args.algo}_{args.defenders}v{args.intruders}_stage2_ep{ep + 1:02d}.gif"
             render_gif(episode_data["frames"], cfg, args, gif_path)
             print(f"Saved animation: {gif_path}")
+
+        if args.csv:
+            csv_path = export_csv(episode_data, args, output_root, ep)
+            print(f"Saved trajectory CSV: {csv_path}")
 
     env.close()
 

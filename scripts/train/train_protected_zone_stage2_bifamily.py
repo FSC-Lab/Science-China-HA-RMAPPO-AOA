@@ -69,23 +69,23 @@ def parse_args(args, parser):
     parser.add_argument('--intruder_max_speed', type=float, default=1.0)
 
     # AoA + CPF
-    parser.add_argument('--bearing_sigma0', type=float, default=0.02)
+    parser.add_argument('--bearing_sigma0', type=float, default=0.0262)
     parser.add_argument('--bearing_r0', type=float, default=0.5)
-    parser.add_argument('--cpf_num_particles', type=int, default=256)
-    parser.add_argument('--cpf_sigma_a', type=float, default=0.5)
+    parser.add_argument('--cpf_num_particles', type=int, default=512)
+    parser.add_argument('--cpf_sigma_a', type=float, default=0.2)
     parser.add_argument('--cpf_init_pos_std', type=float, default=1.0)
     parser.add_argument('--cpf_init_vel_std', type=float, default=0.5)
     parser.add_argument('--cpf_init_acc_std', type=float, default=0.2)
     parser.add_argument('--cpf_resample_ess_ratio', type=float, default=0.5)
 
     # threat look-ahead & stage switch
-    parser.add_argument('--threat_lambda', type=float, default=0.05)
-    parser.add_argument('--threat_tau_max', type=float, default=60.0)
+    parser.add_argument('--threat_lambda', type=float, default=0.15)
+    parser.add_argument('--threat_tau_max', type=float, default=30.0)
     parser.add_argument('--threat_tau_step', type=float, default=1.0)
-    parser.add_argument('--tau_switch', type=float, default=10.0)
+    parser.add_argument('--tau_switch', type=float, default=3.0)
 
     # dense reward weights
-    parser.add_argument('--s1_logdet_weight', type=float, default=1.0)
+    parser.add_argument('--s1_logdet_weight', type=float, default=0.5)
     parser.add_argument('--s2_delta_weight', type=float, default=1.0)
 
     # stage-1 reward terms (to be applied on top of S2)
@@ -110,6 +110,12 @@ def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
     all_args.use_wandb = False
+    all_args.num_env_steps = int(10_000_000)
+    all_args.episode_length = 300
+    all_args.n_rollout_threads = 128
+    all_args.lr = 3e-4
+    all_args.critic_lr = 3e-4
+    all_args.num_mini_batch = 4
 
     # algo routing
     if all_args.algorithm_name == "rmappo":

@@ -349,18 +349,18 @@ def draw_static_episode(ax, data, cfg, args, episode_idx):
                         linestyle="--", alpha=0.9)
         if def_line is None:
             def_line = line
-        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["defender"], s=args.marker_size**2, marker="o")
-        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["defender"], s=args.marker_size**2, marker="s")
+        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["defender"], s=(args.marker_size * 1.3) ** 2, marker="o")
+        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["defender"], s=(args.marker_size * 1.3) ** 2, marker="s")
 
     for idx, traj in enumerate(data["traj_int"]):
         if traj.size == 0:
             continue
         line, = ax.plot(traj[:, 0], traj[:, 1], color=COLORS["intruder_traj"], linewidth=args.linewidth,
-                        linestyle="--", alpha=0.9)
+                        linestyle="-", alpha=0.9)
         if intr_line is None:
             intr_line = line
-        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["intruder"], s=args.marker_size**2, marker="o")
-        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["intruder"], s=args.marker_size**2, marker="^")
+        ax.scatter(traj[0, 0], traj[0, 1], color=COLORS["intruder"], s=(args.marker_size * 1.3) ** 2, marker="o")
+        ax.scatter(traj[-1, 0], traj[-1, 1], color=COLORS["intruder"], s=(args.marker_size * 1.3) ** 2, marker="^")
 
     if def_line is not None:
         def_line.set_label("Defender trajectory")
