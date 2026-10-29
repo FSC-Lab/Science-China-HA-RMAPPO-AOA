@@ -1,0 +1,749 @@
+{
+  "description": "Additive rendering reproduction release; all pre-existing repository paths are preserved.",
+  "base_repository": "https://github.com/FSC-Lab/Science-China-HA-RMAPPO-AOA",
+  "base_commit": "0f4c78c738d4be12a334f71f8cb9cc181dea6e73",
+  "namespace": "reproductions/2026-10-29-renderings",
+  "language": "English",
+  "recorded_episodes": 30,
+  "artifact_files": 120,
+  "verified_successes": 21,
+  "breaches": 9,
+  "checks": {
+    "all_120_artifacts_identical_to_original_execution": true,
+    "all_30_episode_csvs_and_checkpoint_hashes_validated_in_fresh_checkout": true,
+    "all_existing_core_simulation_source_hashes_match_original_execution": true,
+    "python_and_shell_syntax_validated": true,
+    "fresh_checkout_smoke_png_and_csv_identical": [
+      {
+        "stage": 1,
+        "scenario": "2v1",
+        "seed": 61000
+      },
+      {
+        "stage": 2,
+        "scenario": "2v1",
+        "seed": 61014
+      },
+      {
+        "stage": 2,
+        "scenario": "7v3",
+        "seed": 61003
+      }
+    ],
+    "all_new_text_is_English": true,
+    "local_account_paths_and_unique_hardware_identifiers_excluded": true
+  },
+  "hash_scope": "Every published file under this namespace except package_manifest.json; paths are relative to the package directory.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 95,
+      "sha256": "1462ef388d1c2d9e458a67ec5c593fdc37487f51040eb31e96bf61282f6dfe5e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12546,
+      "sha256": "372c0930e78ea44b7784efbf77b197ea398b25f6b6571498c5197f18d111ebd4"
+    },
+    {
+      "path": "hardware.json",
+      "bytes": 744,
+      "sha256": "83493a8f6420bf92d0a4e3fca516b7a089f14b2360ca5d22dcda3f4dffe08080"
+    },
+    {
+      "path": "render_output/index.html",
+      "bytes": 18168,
+      "sha256": "88309eac7289e5f4e9ea1e4f0417435469c530a766ed7cbee80eeaa7d4cceedd"
+    },
+    {
+      "path": "render_output/render_manifest.json",
+      "bytes": 130925,
+      "sha256": "399a6acb41175eebffc4cec9b44caf1688a7d99ee7b75d4912b42ac47e271d4f"
+    },
+    {
+      "path": "render_output/run_verification.json",
+      "bytes": 12256,
+      "sha256": "7e7548348374992f3f7212d55e3051c3d051b17c3a67287762a029b30197b3ca"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep01.csv",
+      "bytes": 7209,
+      "sha256": "ad06dbb07f0b0e1ed0e96aac2cff5f2740d7c908cf0eb5b9d961f117767257a8"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep01.gif",
+      "bytes": 76977,
+      "sha256": "46b897d724c544af30e7eac29f72805a762a3af396e4d422f55e6cc560e2c169"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep01.pdf",
+      "bytes": 13860,
+      "sha256": "6a320a483b0dc20368885c70257837e89f77922a5d5b173328883d64872c7678"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep01.png",
+      "bytes": 154748,
+      "sha256": "18ea21ea464ebd04861a4d7cd24fdfe757ab2c8447c9dbc571d2be21d4cd5a2a"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep02.csv",
+      "bytes": 6930,
+      "sha256": "9fbf4d6d37b11b4bc1bb4a7bdb5ae97d79e394f7f3d5499a625e44bf2a51803f"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep02.gif",
+      "bytes": 80684,
+      "sha256": "f866953919cc6197a0530cbf26eafb916942f62aa4cd90ca603344552aa7f994"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep02.pdf",
+      "bytes": 13803,
+      "sha256": "5f918938ffbb72006874180b1d4d4d9ef5d9bf1187e657f3f386c6a23fe05e02"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep02.png",
+      "bytes": 151154,
+      "sha256": "070f13aeab1ea9f5a8f4135a8aabee28863c26227297642e57bb957b2283d352"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep03.csv",
+      "bytes": 7176,
+      "sha256": "3ba01a8798eaacef5b277ce1609a5ab368e38bdbfb7b6ba88ac61277d486857b"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep03.gif",
+      "bytes": 80956,
+      "sha256": "0ab5228c7793a8bb06b778e6e3e0d27d45b65047d3c6da7ed79d241df8d5135d"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep03.pdf",
+      "bytes": 13872,
+      "sha256": "574b2207465e9fa16b9b1a25898e1a5197033c8beb9543a6ddf78a201783ca7e"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep03.png",
+      "bytes": 152046,
+      "sha256": "3cbcf83b69e25d93ded65bf031e0503578e23a29cb3dfb9de06d3511ecc02ead"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep04.csv",
+      "bytes": 7963,
+      "sha256": "f79cf12d35c844a5153dd58055eb6542f10103a9c14301bea47e9bf7aa40640e"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep04.gif",
+      "bytes": 85540,
+      "sha256": "b72b287796fb7a537eb02fce1f709f2db3714999e3abfa933e5b3e5a388519a9"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep04.pdf",
+      "bytes": 13967,
+      "sha256": "f9be735dcea75ea32cfb217686a064a71b48c00bafeadabd0c5a0b5ad25c178e"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep04.png",
+      "bytes": 154690,
+      "sha256": "097af367327ef9c9c1987b2a7cb72e5eeffd7aa4a12bbd16d44f6db66f001fd3"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep05.csv",
+      "bytes": 7482,
+      "sha256": "89ee4c73974ea4d4b918da70edba7f43e6c9aa20f01d1ebaba3aa9159c627e09"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep05.gif",
+      "bytes": 79410,
+      "sha256": "379382d35ae87061bb563653991ff711602682a75d19bf9264859ac567185fff"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep05.pdf",
+      "bytes": 13889,
+      "sha256": "434d339b770916f6b830875a3e6c796be62c403789064010aaecf8146e61cfd1"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_ep05.png",
+      "bytes": 153111,
+      "sha256": "b8e81ad58b88c2f5bfb1d4e9858834d72a85ea2f5b949dc8b17a521f5863e9e7"
+    },
+    {
+      "path": "render_output/stage1/rmappo_2v1_stage1_summary.json",
+      "bytes": 24471,
+      "sha256": "60b58b72e46e0114168032f9da31b917f753efabcdb5da2a3305e4e248d1aabe"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep01.csv",
+      "bytes": 19216,
+      "sha256": "d55060cfacc576c4d30a3eee49345a6667d15ed94842d8d0e38bc50145a6cc50"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep01.gif",
+      "bytes": 114508,
+      "sha256": "9fa78712aa8bd5f5ab84c419587875ee82d91f07736d830fc17e2aba6618a0b6"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep01.pdf",
+      "bytes": 16122,
+      "sha256": "3aabdac3b62568c9a170a29168acf294562bc36bfc1771f04e40059a4fc28e47"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep01.png",
+      "bytes": 175190,
+      "sha256": "d879c6abd222b37c6444602512563bba04d53cc2857d4c8a362dbd6f40bb7a15"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep02.csv",
+      "bytes": 22708,
+      "sha256": "fd982bf9ac354452910777385f970ebfa73d20cc9a99bbcf5be98d0fd9087ed6"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep02.gif",
+      "bytes": 117734,
+      "sha256": "30baf09cb4b2fe4cc09a535abb381aeb7eef39c48efaa22950563a65cdf53d9f"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep02.pdf",
+      "bytes": 16457,
+      "sha256": "2b4f2fdd9d3045bdc04992f8c28a9d449a5b4b69dc414ae40fe5e5094cd56337"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep02.png",
+      "bytes": 176373,
+      "sha256": "6bb3c1d8736afc8fc2c59f574163631c52f10a929aa0bc24b4a0f7e19b351280"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep03.csv",
+      "bytes": 18529,
+      "sha256": "6a022cebee25817d65a62c6322920928fbd1132bf5f792fdde7f25d6b6a2bfbe"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep03.gif",
+      "bytes": 106635,
+      "sha256": "96d5bc0f45ef302e1d0a6f4d92ac6457fcb05e5f43dc5a6a6a2d05b41547591a"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep03.pdf",
+      "bytes": 16046,
+      "sha256": "6e1e6938907c6ea2196778c1ac2a2bb59d67707e03eaa1e46e9a99a3ca591b76"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep03.png",
+      "bytes": 175137,
+      "sha256": "7130cc3757289b712159e1470cc9b9d5ae56c6ee6f53173ac78108b892b2a7ad"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep04.csv",
+      "bytes": 15926,
+      "sha256": "df1963ffbb965df51fdc4c9d5bde5a42a837f6c133d7bee4b816dec107ec6bd7"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep04.gif",
+      "bytes": 101821,
+      "sha256": "a1f7dca1cfc6514bd77505778405a4c6238b087fdbc9a8271fad78103834ab52"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep04.pdf",
+      "bytes": 15770,
+      "sha256": "f58a01f98222f25bbf5e06241ebee4a3dc4fda5286237e060c60b9b3e707af3d"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep04.png",
+      "bytes": 171768,
+      "sha256": "f0cb0c70fdd3fcf897eba76bb76fad59e7a38a42bf070fb1a07f61f461925ac6"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep05.csv",
+      "bytes": 17354,
+      "sha256": "3eada5eaacf9ec5577eebce99902b6669f7b964baab5c0166a8c012345510048"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep05.gif",
+      "bytes": 99896,
+      "sha256": "7efec9eaa63a36c6f296fdee8926df17aaec4fbc4b99ac9ceeac735243d61731"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep05.pdf",
+      "bytes": 15873,
+      "sha256": "0fefe40c7901698367f421075b5053302efd19afa0d12f645ae40ad7f9330252"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_ep05.png",
+      "bytes": 168925,
+      "sha256": "4eba223c1ca7378de0a969ff72000a3628b5812863e971ee50f7a8fa02416382"
+    },
+    {
+      "path": "render_output/stage1/rmappo_5v2_stage1_summary.json",
+      "bytes": 29149,
+      "sha256": "cde2df1a3cbc83bbf5d63ddf7a09188331b145176b4a36029b2a79282cacf850"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep01.csv",
+      "bytes": 42474,
+      "sha256": "f5fd241be1fc8bcc955e8dd94be7d8d47958f10cce8c21315c3ee762e5d17da7"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep01.gif",
+      "bytes": 179707,
+      "sha256": "c9e02d001c9ce4ca84a7aaf6b58e62bcb1a11363729cef989f18a5580e83f025"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep01.pdf",
+      "bytes": 19225,
+      "sha256": "bbd0654481f71ea6c0e36be7f673258fd1e5525138b56a77b500a9230aa35da6"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep01.png",
+      "bytes": 209968,
+      "sha256": "4681965c3baf93ffd4a08c6a34fed468792dcaf0d651db28be0eb6728e605b5b"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep02.csv",
+      "bytes": 46633,
+      "sha256": "b3300b5a235fd00b2fb2719165e1655ad60b2a2aff57df86c72361774d81f83e"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep02.gif",
+      "bytes": 207534,
+      "sha256": "c7db2b533785664e0842ef4b02174d70c424efcf42811f3e2bd2c94d96b99411"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep02.pdf",
+      "bytes": 19533,
+      "sha256": "6310555a574756ce99335e56355bf9503e6a509ab50e55bed842cc5485ad2541"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep02.png",
+      "bytes": 213760,
+      "sha256": "0f93aede56621b861cca293a3605471868ceeefe37c654e2f4efdd4202053f77"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep03.csv",
+      "bytes": 25362,
+      "sha256": "5db3a770162b1f9983b457bd6f45649d65905351992121d9a4b603d02b77a649"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep03.gif",
+      "bytes": 116805,
+      "sha256": "97c89943c42d70f3679a64af56c5f1ae9760385c84225188444c8e701054c238"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep03.pdf",
+      "bytes": 17547,
+      "sha256": "4646ee2c64bc1b41000f2d84f7374b6f265ad832bec3ade820601894df643d96"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep03.png",
+      "bytes": 189272,
+      "sha256": "328593411b6311f6c8a996a3445b635c25da389bffb15b3e8983c90a25429d80"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep04.csv",
+      "bytes": 44677,
+      "sha256": "5b41c5c48591610d07c6fc20132c39f366b3cab40a4a1be51937bdca861cc5f0"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep04.gif",
+      "bytes": 184307,
+      "sha256": "1ba1ef4af0ae65b30b39dae2a747478f82818bacaec1751a5efbcacff9061b86"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep04.pdf",
+      "bytes": 19338,
+      "sha256": "d692c106224e7f443918026f06a64d1f4b7f7d5b7c3657742826003df085a0bd"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep04.png",
+      "bytes": 215009,
+      "sha256": "6a80a7dba6d5ecca74c900ff1dc5d8e50550f29f887a1231dd96148405bf4382"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep05.csv",
+      "bytes": 43697,
+      "sha256": "809000b3fb9ce2db45b7cc92de983a8741985181963778869d22a637ace0add1"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep05.gif",
+      "bytes": 181434,
+      "sha256": "54e23c34c4704c5922356e46c4dae89106cdc014c7133e7c27ae3847c53246ee"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep05.pdf",
+      "bytes": 19271,
+      "sha256": "04e31552de5e3aae569f0112f3c4cedf64b8463a72b2a41a24ba7c409164f71a"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_ep05.png",
+      "bytes": 205182,
+      "sha256": "a3815b78178fdc2f3e77369c3a45834345fa5d37c0389d83726481b04d346a6b"
+    },
+    {
+      "path": "render_output/stage1/rmappo_7v3_stage1_summary.json",
+      "bytes": 32326,
+      "sha256": "686b35d3e1ed5467bade63ad979b46327780592ebffe4e5447522a1fe744ae35"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep01.csv",
+      "bytes": 15525,
+      "sha256": "89944292cbd25781a0ca2a05472e63b518042bbd695ecbfcd09a6a6144c05d9b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep01.gif",
+      "bytes": 105916,
+      "sha256": "90abf71ec44c59b5f4a066315f655bdc3520d8b655c1bb48c73518964c3f083d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep01.pdf",
+      "bytes": 17272,
+      "sha256": "1494f4fa42353a8cb1cdb41f4afbfbdc3e079097a14ec53975b9635f91f5574c"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep01.png",
+      "bytes": 186905,
+      "sha256": "bf00373364c3ffbf6b553bb71ee7ee6cda774f83721f7a6b3302db2391c9322d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep02.csv",
+      "bytes": 34311,
+      "sha256": "4b6c0c4155c121168eb6ad0989e6f1e093f92a5ccbd2489f67fbb290e7306b51"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep02.gif",
+      "bytes": 160138,
+      "sha256": "8f27f3721168768d50ee1fcf361d344a6681cf45d4184b453bc85a9e45e6394b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep02.pdf",
+      "bytes": 18932,
+      "sha256": "4d9c0ef764b785ae7a4dec1dfc2548a9e1c1f690a4705212e70d2b0d47f5e05f"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep02.png",
+      "bytes": 205901,
+      "sha256": "97238feb02006904cbd204fe8a52d240e28d875c00d12102fc46fc55bb37d351"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep03.csv",
+      "bytes": 27593,
+      "sha256": "e22bc3fb4949cd00ec6ed50f857679cc1758be47e85063e6a130381a47fc74aa"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep03.gif",
+      "bytes": 142529,
+      "sha256": "59a059cefe9f104ae7ef0a84bc22b4555c1f98da89653c013f21815375e9f9e6"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep03.pdf",
+      "bytes": 18379,
+      "sha256": "2ccfd01dcbc340d38342942540e434ef4eaa17add2afa213b712b96bf66e9bd3"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep03.png",
+      "bytes": 200351,
+      "sha256": "a4384d2dba330d893c85d2215c0a25ac32fba3d01085cab17c4bcc7e857d7d3d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep04.csv",
+      "bytes": 25656,
+      "sha256": "4bf914a783c6d32ed7d3affb41c0255befcd59d27a63083b01c390728afb122d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep04.gif",
+      "bytes": 129883,
+      "sha256": "69c531a320a9ee164af72a132a1e57dc8ef0e0cbda2549ff0efe63d011d4606a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep04.pdf",
+      "bytes": 18134,
+      "sha256": "8c9a77e60948e93fcd9097c1650cc923def7951900d08ff01d01f31d89d71f20"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep04.png",
+      "bytes": 188661,
+      "sha256": "1611ea856f8d75833fba2a1bc224ece62cba6162d91e82ee31942375a2a619ff"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep05.csv",
+      "bytes": 88574,
+      "sha256": "bc1ff8e71ae6b34564880edb74cd2f5e28d4be1dab419f26987602d27d98959e"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep05.gif",
+      "bytes": 378171,
+      "sha256": "83a310de4f71e763df8771930a625e6c4ec2b493d2faa65de9bacee8e1f5199a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep05.pdf",
+      "bytes": 20563,
+      "sha256": "09609d50a9c81b2e31ecd4f3c1a1601c9093ff8fb533d62d3359d3c7df81c79b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_ep05.png",
+      "bytes": 258144,
+      "sha256": "ad5abab6da3f64353c5bfc139065c23202cefc45f2d387b6e6c7f83675d7eb8e"
+    },
+    {
+      "path": "render_output/stage2/rmappo_2v1_stage2_summary.json",
+      "bytes": 23362,
+      "sha256": "1a4350e35b9c49c3fa3f555cc9ee20de07b05b1ec82f963fe60978af08f326fc"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep01.csv",
+      "bytes": 29440,
+      "sha256": "5fd116a830bc21cc2892e50a1143978fe19b2f94633feb559fc54693420f9852"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep01.gif",
+      "bytes": 185765,
+      "sha256": "11ebf4c0d6262dea97823662eada2b3b2b1043b3c563954ce0bf9d8c31cde37f"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep01.pdf",
+      "bytes": 19897,
+      "sha256": "5dd0992293e0a27a8ae35d2b82873bf4ff33fa0412aeb7a7b0bd16e9e560bc6d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep01.png",
+      "bytes": 220197,
+      "sha256": "033f4b248b7ce78ad0ef072778012aeeafaeb8572b2cce61dbfb2fec3656623d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep02.csv",
+      "bytes": 28527,
+      "sha256": "7030b4d5ac96ed37ee4190631002ba857d8bbb672320a280cad26915f57d8a76"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep02.gif",
+      "bytes": 148964,
+      "sha256": "5b31416de9021ce071811a6f6ad2a3561763b66590765a55dfd725dcef52f3ac"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep02.pdf",
+      "bytes": 19833,
+      "sha256": "4baefaed8297ba4097a9f346c725b6b0c7dc3bd7472f83782d50c1a5bd0a1338"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep02.png",
+      "bytes": 224710,
+      "sha256": "80e1183f30b4e57f2c479e6e8be5a038cf09aa3e99ec3deb54ff97229585007c"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep03.csv",
+      "bytes": 23621,
+      "sha256": "c0080cc1d98073b411b060f9ed1334724a12c22cc339a3ad3502bf6e7b82d040"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep03.gif",
+      "bytes": 132606,
+      "sha256": "8c7392934276941e0248f24e7b3d925973d31ed3b79d2883bac951e9a42d363d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep03.pdf",
+      "bytes": 19481,
+      "sha256": "eaf3f7aa18143dacfe1ba76572ac26882d351ca7ed7deb719e647c5a172d040a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep03.png",
+      "bytes": 226756,
+      "sha256": "0d2977e8317896432be1c4d4e257b614ebcb102dc9ea1b6938f2605274b5be53"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep04.csv",
+      "bytes": 23641,
+      "sha256": "5437e6b6497302826db2ce2154732350381d8e2bb8f793c0d7971d2704fb95fe"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep04.gif",
+      "bytes": 132524,
+      "sha256": "61abdcba0eb966f0284875269644c4b37b328c72fbffd0563a16b7fdef40743b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep04.pdf",
+      "bytes": 19405,
+      "sha256": "db8ff7b2b4ec224ba8d431a893df08e962511254424514eb83625f3dbf404e75"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep04.png",
+      "bytes": 205396,
+      "sha256": "b1ad84593aa39fc94fdc2746dcd75a92bb09f0ce357331cf3415c1db1b85d650"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep05.csv",
+      "bytes": 23525,
+      "sha256": "f76e862aae74149f3b938e40f3166b37bab6ff43b2395cbbe80230e95424dcad"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep05.gif",
+      "bytes": 176990,
+      "sha256": "3be44c91377f0b0ac5e74f93534fb1da0b1107542f7f1cefe250aa2b4d79bb7a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep05.pdf",
+      "bytes": 19415,
+      "sha256": "cacad0b1a0badd1c69bda2435d8a0232a91d128bb8fad89438d617452df91a1c"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_ep05.png",
+      "bytes": 213360,
+      "sha256": "722ce2ddd711a707a253f169003886329a27ddc7218c899fe3d1e666cec4535c"
+    },
+    {
+      "path": "render_output/stage2/rmappo_5v2_stage2_summary.json",
+      "bytes": 30146,
+      "sha256": "e5a680c65d7a168853cfca5bea5cbfebc43c1f6ac423730935caa9240ec3982d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep01.csv",
+      "bytes": 68807,
+      "sha256": "92b6a5551a16995c19919aa9d100d4ac0358b8786010340739aec3f06134283b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep01.gif",
+      "bytes": 276617,
+      "sha256": "bdefd9406153fdeade2b768c007e158c282d81969699afa1459cdc9e2b1fd248"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep01.pdf",
+      "bytes": 23749,
+      "sha256": "c795625e6cc37f2142a2abf3143fc1648fa5d59c7c31a7c9d82e66254a3efc3b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep01.png",
+      "bytes": 272843,
+      "sha256": "b3706e3f2d9d20de560a487cd89597926922a44f1a1ac9f8e4fb2727fdf2c963"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep02.csv",
+      "bytes": 66429,
+      "sha256": "f0faa04bddb0c5bffd84c3ddab8ebde315a0626c64b7e7e7aa58bfb65bc1541d"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep02.gif",
+      "bytes": 264374,
+      "sha256": "080edb236278d03d3d415ed30d49cd4ce0a89555db1d73cb0e1449693bcb5046"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep02.pdf",
+      "bytes": 23677,
+      "sha256": "0bc1282d8d308a0ce549f48e9c7c2bba38ca592190aaf4eb872db652f201227a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep02.png",
+      "bytes": 273488,
+      "sha256": "f06d13fadd72eadb91e125d2c076412dea1340feeec5e1bf94bf50792d61e482"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep03.csv",
+      "bytes": 66564,
+      "sha256": "867060747d2051e034073c11d76cc1086f68639a8da0de6adc17ff18e09db230"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep03.gif",
+      "bytes": 255050,
+      "sha256": "39b84de714301894dea255f68c0211e459d66afbccd8af5cb758fc32518a5015"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep03.pdf",
+      "bytes": 23451,
+      "sha256": "4bcee03c704ebece315afb3ab6044b5380483cb027f584ad96b98372bc878637"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep03.png",
+      "bytes": 265911,
+      "sha256": "ec84f73d645ab8474ba41ec014ac5790a4fd830f0817be37a6ed3e8897f3871b"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep04.csv",
+      "bytes": 35730,
+      "sha256": "b12cb71c58ddbda4450a47101709cfe7cf6b920c95e49316f874408560c537c7"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep04.gif",
+      "bytes": 166839,
+      "sha256": "7a620186d42870bdda50773a25b1ec224c98c4f5211ce2dc9be6fafaf791d114"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep04.pdf",
+      "bytes": 21424,
+      "sha256": "4bdd28d10d1aef58b139936b5c80d395da92d98a87882d3f3162a1f5f23b932a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep04.png",
+      "bytes": 242559,
+      "sha256": "a032057ba181260ece54036cd3ba196d01e3bc4d25afe8925821dbfae052e1c8"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep05.csv",
+      "bytes": 66152,
+      "sha256": "86e5ede9efa61b0ec953bf264754057387ede722697a9b561278353ae21f18dd"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep05.gif",
+      "bytes": 295113,
+      "sha256": "8c38704c3d90d976f2d64aa5667553e8823ba5e97ab26a5185caad748796428a"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep05.pdf",
+      "bytes": 23760,
+      "sha256": "de0e3f1850e5ad2e271152ccd6faaff96109c140a148e87ca8f438206b22c3b6"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_ep05.png",
+      "bytes": 295140,
+      "sha256": "e640a33109600f706fe1b12ee8b9f4619874c93c13d640e7a5b3c21fdd83f472"
+    },
+    {
+      "path": "render_output/stage2/rmappo_7v3_stage2_summary.json",
+      "bytes": 32338,
+      "sha256": "548fbe8c6ad56dbd9098833645eb245bd71bbc6a69cac4dbb6ba65245129ed76"
+    },
+    {
+      "path": "render_output/success_summary.csv",
+      "bytes": 17026,
+      "sha256": "9e71656fc3ad2eb6d7a8a2b7202aa314fca1171ecee7bebb767e248b0070dce3"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 1078,
+      "sha256": "792d86ed35ebfe1cb4cfb84679782964371710dcebd46e5b732ce0722984c58e"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 303,
+      "sha256": "5f4007cd6fcf257e64e30d461b3c7aa4e3ab6ec54f463663a181f00691da6a2a"
+    },
+    {
+      "path": "scripts/render_audit.py",
+      "bytes": 21706,
+      "sha256": "9e1b095d141fe0a28553562b94c59fc3477fb54397f4510689f4bc8e603c2e4c"
+    },
+    {
+      "path": "scripts/render_paper_suite.sh",
+      "bytes": 1723,
+      "sha256": "5fadfaef3fd14a29919c32bc2cfb7eb9c7731e5c466684bc8f51d07be79eef9c"
+    },
+    {
+      "path": "scripts/render_protected_zone_stage1.py",
+      "bytes": 17149,
+      "sha256": "16a9ee0de246c0ff87344628c25e5bc5ca74f6cae1a9ff1f5dafad3426cd99a2"
+    },
+    {
+      "path": "scripts/render_protected_zone_stage2.py",
+      "bytes": 23890,
+      "sha256": "4d54a991e505af42f6322935c4b236e62f631bf58be5271d57c2789557838715"
+    },
+    {
+      "path": "scripts/render_stage1.sh",
+      "bytes": 2283,
+      "sha256": "864b017aeb1f536c665ab2f61d8f83a0af744998e9db1ee9d3eb6d4f161ea140"
+    },
+    {
+      "path": "scripts/render_stage2.sh",
+      "bytes": 2956,
+      "sha256": "3e05e84ee837b175a8f040a4fac389e0e1cc4145a15268a27bda991c1fe0528e"
+    },
+    {
+      "path": "scripts/summarize_render_output.py",
+      "bytes": 26938,
+      "sha256": "fce43b173fa4c0e267b238a3ed03f5f8efdba81b9e596b5bbd126cb1a6cc7774"
+    }
+  ]
+}

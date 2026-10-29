@@ -1,0 +1,30 @@
+{
+  "machine": "Mac Studio",
+  "model_identifier": "Mac15,14",
+  "chip": "Apple M3 Ultra",
+  "cpu_cores": 32,
+  "performance_cores": 24,
+  "efficiency_cores": 8,
+  "gpu_cores": 80,
+  "unified_memory": "512 GB",
+  "architecture": "arm64",
+  "operating_system": "macOS 27.0.1",
+  "os_build": "26A434",
+  "verification_source": "system_profiler and sw_vers read on 2026-10-29",
+  "execution": {
+    "device": "CPU",
+    "pytorch_intra_op_threads": 1,
+    "pytorch_inter_op_threads": 1,
+    "parallel_rollout_environments": 1,
+    "gpu_used": false
+  },
+  "software": {
+    "python": "3.10.15",
+    "torch": "2.1.0",
+    "numpy": "1.25.2",
+    "gymnasium": "0.28.1",
+    "matplotlib": "3.7.2",
+    "imageio": "2.31.1",
+    "pillow": "12.3.0"
+  }
+}

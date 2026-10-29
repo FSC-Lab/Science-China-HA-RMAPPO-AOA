@@ -1,0 +1,322 @@
+{
+  "working_directory": "repository root",
+  "exit_code": 0,
+  "episodes": 30,
+  "files_per_format": 30,
+  "ep01_pngs_identical_to_previous_six_figures": true,
+  "pdf_checks": [
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep01.pdf",
+      "pages": 1,
+      "sha256": "6a320a483b0dc20368885c70257837e89f77922a5d5b173328883d64872c7678"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep02.pdf",
+      "pages": 1,
+      "sha256": "5f918938ffbb72006874180b1d4d4d9ef5d9bf1187e657f3f386c6a23fe05e02"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep03.pdf",
+      "pages": 1,
+      "sha256": "574b2207465e9fa16b9b1a25898e1a5197033c8beb9543a6ddf78a201783ca7e"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep04.pdf",
+      "pages": 1,
+      "sha256": "f9be735dcea75ea32cfb217686a064a71b48c00bafeadabd0c5a0b5ad25c178e"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep05.pdf",
+      "pages": 1,
+      "sha256": "434d339b770916f6b830875a3e6c796be62c403789064010aaecf8146e61cfd1"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep01.pdf",
+      "pages": 1,
+      "sha256": "3aabdac3b62568c9a170a29168acf294562bc36bfc1771f04e40059a4fc28e47"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep02.pdf",
+      "pages": 1,
+      "sha256": "2b4f2fdd9d3045bdc04992f8c28a9d449a5b4b69dc414ae40fe5e5094cd56337"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep03.pdf",
+      "pages": 1,
+      "sha256": "6e1e6938907c6ea2196778c1ac2a2bb59d67707e03eaa1e46e9a99a3ca591b76"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep04.pdf",
+      "pages": 1,
+      "sha256": "f58a01f98222f25bbf5e06241ebee4a3dc4fda5286237e060c60b9b3e707af3d"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep05.pdf",
+      "pages": 1,
+      "sha256": "0fefe40c7901698367f421075b5053302efd19afa0d12f645ae40ad7f9330252"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep01.pdf",
+      "pages": 1,
+      "sha256": "bbd0654481f71ea6c0e36be7f673258fd1e5525138b56a77b500a9230aa35da6"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep02.pdf",
+      "pages": 1,
+      "sha256": "6310555a574756ce99335e56355bf9503e6a509ab50e55bed842cc5485ad2541"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep03.pdf",
+      "pages": 1,
+      "sha256": "4646ee2c64bc1b41000f2d84f7374b6f265ad832bec3ade820601894df643d96"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep04.pdf",
+      "pages": 1,
+      "sha256": "d692c106224e7f443918026f06a64d1f4b7f7d5b7c3657742826003df085a0bd"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep05.pdf",
+      "pages": 1,
+      "sha256": "04e31552de5e3aae569f0112f3c4cedf64b8463a72b2a41a24ba7c409164f71a"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep01.pdf",
+      "pages": 1,
+      "sha256": "1494f4fa42353a8cb1cdb41f4afbfbdc3e079097a14ec53975b9635f91f5574c"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep02.pdf",
+      "pages": 1,
+      "sha256": "4d9c0ef764b785ae7a4dec1dfc2548a9e1c1f690a4705212e70d2b0d47f5e05f"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep03.pdf",
+      "pages": 1,
+      "sha256": "2ccfd01dcbc340d38342942540e434ef4eaa17add2afa213b712b96bf66e9bd3"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep04.pdf",
+      "pages": 1,
+      "sha256": "8c9a77e60948e93fcd9097c1650cc923def7951900d08ff01d01f31d89d71f20"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep05.pdf",
+      "pages": 1,
+      "sha256": "09609d50a9c81b2e31ecd4f3c1a1601c9093ff8fb533d62d3359d3c7df81c79b"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.pdf",
+      "pages": 1,
+      "sha256": "5dd0992293e0a27a8ae35d2b82873bf4ff33fa0412aeb7a7b0bd16e9e560bc6d"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.pdf",
+      "pages": 1,
+      "sha256": "4baefaed8297ba4097a9f346c725b6b0c7dc3bd7472f83782d50c1a5bd0a1338"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.pdf",
+      "pages": 1,
+      "sha256": "eaf3f7aa18143dacfe1ba76572ac26882d351ca7ed7deb719e647c5a172d040a"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.pdf",
+      "pages": 1,
+      "sha256": "db8ff7b2b4ec224ba8d431a893df08e962511254424514eb83625f3dbf404e75"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.pdf",
+      "pages": 1,
+      "sha256": "cacad0b1a0badd1c69bda2435d8a0232a91d128bb8fad89438d617452df91a1c"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep01.pdf",
+      "pages": 1,
+      "sha256": "c795625e6cc37f2142a2abf3143fc1648fa5d59c7c31a7c9d82e66254a3efc3b"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep02.pdf",
+      "pages": 1,
+      "sha256": "0bc1282d8d308a0ce549f48e9c7c2bba38ca592190aaf4eb872db652f201227a"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep03.pdf",
+      "pages": 1,
+      "sha256": "4bcee03c704ebece315afb3ab6044b5380483cb027f584ad96b98372bc878637"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep04.pdf",
+      "pages": 1,
+      "sha256": "4bdd28d10d1aef58b139936b5c80d395da92d98a87882d3f3162a1f5f23b932a"
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep05.pdf",
+      "pages": 1,
+      "sha256": "de0e3f1850e5ad2e271152ccd6faaff96109c140a148e87ca8f438206b22c3b6"
+    }
+  ],
+  "pdf_layout_review_passed": true,
+  "pdf_pages_visually_reviewed": 30,
+  "gif_decode_checks": [
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep01.gif",
+      "decoded_frames": 24,
+      "duration_ms": 1920
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep02.gif",
+      "decoded_frames": 23,
+      "duration_ms": 1840
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep03.gif",
+      "decoded_frames": 24,
+      "duration_ms": 1920
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep04.gif",
+      "decoded_frames": 27,
+      "duration_ms": 2160
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_2v1_stage1_ep05.gif",
+      "decoded_frames": 25,
+      "duration_ms": 2000
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep01.gif",
+      "decoded_frames": 28,
+      "duration_ms": 2240
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep02.gif",
+      "decoded_frames": 33,
+      "duration_ms": 2640
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep03.gif",
+      "decoded_frames": 27,
+      "duration_ms": 2160
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep04.gif",
+      "decoded_frames": 23,
+      "duration_ms": 1840
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_5v2_stage1_ep05.gif",
+      "decoded_frames": 25,
+      "duration_ms": 2000
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep01.gif",
+      "decoded_frames": 44,
+      "duration_ms": 3520
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep02.gif",
+      "decoded_frames": 48,
+      "duration_ms": 3840
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep03.gif",
+      "decoded_frames": 26,
+      "duration_ms": 2080
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep04.gif",
+      "decoded_frames": 46,
+      "duration_ms": 3680
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage1/rmappo_7v3_stage1_ep05.gif",
+      "decoded_frames": 45,
+      "duration_ms": 3600
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep01.gif",
+      "decoded_frames": 18,
+      "duration_ms": 1440
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep02.gif",
+      "decoded_frames": 40,
+      "duration_ms": 3200
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep03.gif",
+      "decoded_frames": 32,
+      "duration_ms": 2560
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep04.gif",
+      "decoded_frames": 29,
+      "duration_ms": 2320
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_2v1_stage2_ep05.gif",
+      "decoded_frames": 102,
+      "duration_ms": 8160
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.gif",
+      "decoded_frames": 15,
+      "duration_ms": 1200
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.gif",
+      "decoded_frames": 15,
+      "duration_ms": 1200
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.gif",
+      "decoded_frames": 12,
+      "duration_ms": 960
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.gif",
+      "decoded_frames": 12,
+      "duration_ms": 960
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.gif",
+      "decoded_frames": 12,
+      "duration_ms": 960
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep01.gif",
+      "decoded_frames": 25,
+      "duration_ms": 2000
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep02.gif",
+      "decoded_frames": 24,
+      "duration_ms": 1920
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep03.gif",
+      "decoded_frames": 24,
+      "duration_ms": 1920
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep04.gif",
+      "decoded_frames": 13,
+      "duration_ms": 1040
+    },
+    {
+      "path": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_7v3_stage2_ep05.gif",
+      "decoded_frames": 24,
+      "duration_ms": 1920
+    }
+  ],
+  "active_output_counts": {
+    "png": 30,
+    "gif": 30,
+    "pdf": 30,
+    "csv": 30
+  },
+  "original_execution_command": "PYTHON=.venv-repro/bin/python bash scripts/render_paper_suite.sh",
+  "reproduction_command": "PYTHON=.venv-repro/bin/python bash reproductions/2026-10-29-renderings/scripts/render_paper_suite.sh",
+  "publication_note": "This record describes checks of the original rendering run. Artifact bytes are copied unchanged; paths are normalized for publication."
+}

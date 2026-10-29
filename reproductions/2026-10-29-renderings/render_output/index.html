@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HA-RMAPPO rendering outputs</title>
+<style>body{font-family:system-ui,sans-serif;background:#f5f7fa;color:#1b2534;margin:0 auto;padding:28px;max-width:1600px}h1{font-size:28px}h2{margin:30px 0 8px}.intro{max-width:1050px;line-height:1.7}a{color:#145a90}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.card{background:white;border:1px solid #d7dee6;border-top:5px solid #6b7280;border-radius:7px;padding:12px;min-width:0}.card.success{border-top-color:#16824c}.card.breach{border-top-color:#bc452e}.card.timeout{border-top-color:#b07b13}h3{font-size:15px;margin:0 0 10px}h3 span{float:right;font-size:12px;font-weight:500}img{display:block;width:100%;height:auto}.card p{font-size:13px;margin:10px 0 0}.formats a{display:inline-block;padding:4px 0}footer{margin:28px 0;color:#556274;font-size:13px}</style>
+<h1>HA-RMAPPO · two stages and three team sizes</h1>
+<p class="intro">Each configuration runs 5 consecutive predetermined-seed episodes, retaining every success, breach, timeout and unresolved outcome. Verified success requires the native success flag, capture of every intruder within the capture radius, and no sticky, sampled-position or interpolated-segment breach. Capture distances and CSV terminal states are checked independently. Native callback boundary inconsistencies remain unverified. These 30 fixed-checkpoint episodes illustrate policy behavior and are not an estimate of the paper's defense success rate (DSR).</p>
+<p><a href="success_summary.csv">Per-episode results CSV</a> · <a href="render_manifest.json">Provenance, file hashes and validation manifest</a></p>
+<section><h2>Stage 1 · 2v1</h2>
+<p>Successful episodes: 1, 2, 3, 4, 5. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage1/rmappo_2v1_stage1_ep01.png"><img src="stage1/rmappo_2v1_stage1_ep01.png" alt="Stage 1, 2v1, episode 1: Success" loading="lazy"></a>
+<p>Seed 61000 · Captured 1/1 · 2.4 s</p>
+<p class="formats"><a href="stage1/rmappo_2v1_stage1_ep01.png">PNG</a> · <a href="stage1/rmappo_2v1_stage1_ep01.gif">GIF</a> · <a href="stage1/rmappo_2v1_stage1_ep01.pdf">PDF</a> · <a href="stage1/rmappo_2v1_stage1_ep01.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 2 <span>Success</span></h3>
+<a href="stage1/rmappo_2v1_stage1_ep02.png"><img src="stage1/rmappo_2v1_stage1_ep02.png" alt="Stage 1, 2v1, episode 2: Success" loading="lazy"></a>
+<p>Seed 61001 · Captured 1/1 · 2.3 s</p>
+<p class="formats"><a href="stage1/rmappo_2v1_stage1_ep02.png">PNG</a> · <a href="stage1/rmappo_2v1_stage1_ep02.gif">GIF</a> · <a href="stage1/rmappo_2v1_stage1_ep02.pdf">PDF</a> · <a href="stage1/rmappo_2v1_stage1_ep02.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 3 <span>Success</span></h3>
+<a href="stage1/rmappo_2v1_stage1_ep03.png"><img src="stage1/rmappo_2v1_stage1_ep03.png" alt="Stage 1, 2v1, episode 3: Success" loading="lazy"></a>
+<p>Seed 61002 · Captured 1/1 · 2.4 s</p>
+<p class="formats"><a href="stage1/rmappo_2v1_stage1_ep03.png">PNG</a> · <a href="stage1/rmappo_2v1_stage1_ep03.gif">GIF</a> · <a href="stage1/rmappo_2v1_stage1_ep03.pdf">PDF</a> · <a href="stage1/rmappo_2v1_stage1_ep03.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 4 <span>Success</span></h3>
+<a href="stage1/rmappo_2v1_stage1_ep04.png"><img src="stage1/rmappo_2v1_stage1_ep04.png" alt="Stage 1, 2v1, episode 4: Success" loading="lazy"></a>
+<p>Seed 61003 · Captured 1/1 · 2.7 s</p>
+<p class="formats"><a href="stage1/rmappo_2v1_stage1_ep04.png">PNG</a> · <a href="stage1/rmappo_2v1_stage1_ep04.gif">GIF</a> · <a href="stage1/rmappo_2v1_stage1_ep04.pdf">PDF</a> · <a href="stage1/rmappo_2v1_stage1_ep04.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 5 <span>Success</span></h3>
+<a href="stage1/rmappo_2v1_stage1_ep05.png"><img src="stage1/rmappo_2v1_stage1_ep05.png" alt="Stage 1, 2v1, episode 5: Success" loading="lazy"></a>
+<p>Seed 61004 · Captured 1/1 · 2.5 s</p>
+<p class="formats"><a href="stage1/rmappo_2v1_stage1_ep05.png">PNG</a> · <a href="stage1/rmappo_2v1_stage1_ep05.gif">GIF</a> · <a href="stage1/rmappo_2v1_stage1_ep05.pdf">PDF</a> · <a href="stage1/rmappo_2v1_stage1_ep05.csv">CSV</a></p></article></div></section><section><h2>Stage 1 · 5v2</h2>
+<p>Successful episodes: 1, 2, 3, 4, 5. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage1/rmappo_5v2_stage1_ep01.png"><img src="stage1/rmappo_5v2_stage1_ep01.png" alt="Stage 1, 5v2, episode 1: Success" loading="lazy"></a>
+<p>Seed 61000 · Captured 2/2 · 2.8 s</p>
+<p class="formats"><a href="stage1/rmappo_5v2_stage1_ep01.png">PNG</a> · <a href="stage1/rmappo_5v2_stage1_ep01.gif">GIF</a> · <a href="stage1/rmappo_5v2_stage1_ep01.pdf">PDF</a> · <a href="stage1/rmappo_5v2_stage1_ep01.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 2 <span>Success</span></h3>
+<a href="stage1/rmappo_5v2_stage1_ep02.png"><img src="stage1/rmappo_5v2_stage1_ep02.png" alt="Stage 1, 5v2, episode 2: Success" loading="lazy"></a>
+<p>Seed 61001 · Captured 2/2 · 3.3 s</p>
+<p class="formats"><a href="stage1/rmappo_5v2_stage1_ep02.png">PNG</a> · <a href="stage1/rmappo_5v2_stage1_ep02.gif">GIF</a> · <a href="stage1/rmappo_5v2_stage1_ep02.pdf">PDF</a> · <a href="stage1/rmappo_5v2_stage1_ep02.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 3 <span>Success</span></h3>
+<a href="stage1/rmappo_5v2_stage1_ep03.png"><img src="stage1/rmappo_5v2_stage1_ep03.png" alt="Stage 1, 5v2, episode 3: Success" loading="lazy"></a>
+<p>Seed 61002 · Captured 2/2 · 2.7 s</p>
+<p class="formats"><a href="stage1/rmappo_5v2_stage1_ep03.png">PNG</a> · <a href="stage1/rmappo_5v2_stage1_ep03.gif">GIF</a> · <a href="stage1/rmappo_5v2_stage1_ep03.pdf">PDF</a> · <a href="stage1/rmappo_5v2_stage1_ep03.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 4 <span>Success</span></h3>
+<a href="stage1/rmappo_5v2_stage1_ep04.png"><img src="stage1/rmappo_5v2_stage1_ep04.png" alt="Stage 1, 5v2, episode 4: Success" loading="lazy"></a>
+<p>Seed 61003 · Captured 2/2 · 2.3 s</p>
+<p class="formats"><a href="stage1/rmappo_5v2_stage1_ep04.png">PNG</a> · <a href="stage1/rmappo_5v2_stage1_ep04.gif">GIF</a> · <a href="stage1/rmappo_5v2_stage1_ep04.pdf">PDF</a> · <a href="stage1/rmappo_5v2_stage1_ep04.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 5 <span>Success</span></h3>
+<a href="stage1/rmappo_5v2_stage1_ep05.png"><img src="stage1/rmappo_5v2_stage1_ep05.png" alt="Stage 1, 5v2, episode 5: Success" loading="lazy"></a>
+<p>Seed 61004 · Captured 2/2 · 2.5 s</p>
+<p class="formats"><a href="stage1/rmappo_5v2_stage1_ep05.png">PNG</a> · <a href="stage1/rmappo_5v2_stage1_ep05.gif">GIF</a> · <a href="stage1/rmappo_5v2_stage1_ep05.pdf">PDF</a> · <a href="stage1/rmappo_5v2_stage1_ep05.csv">CSV</a></p></article></div></section><section><h2>Stage 1 · 7v3</h2>
+<p>Successful episodes: 1, 3, 5. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage1/rmappo_7v3_stage1_ep01.png"><img src="stage1/rmappo_7v3_stage1_ep01.png" alt="Stage 1, 7v3, episode 1: Success" loading="lazy"></a>
+<p>Seed 61000 · Captured 3/3 · 4.4 s</p>
+<p class="formats"><a href="stage1/rmappo_7v3_stage1_ep01.png">PNG</a> · <a href="stage1/rmappo_7v3_stage1_ep01.gif">GIF</a> · <a href="stage1/rmappo_7v3_stage1_ep01.pdf">PDF</a> · <a href="stage1/rmappo_7v3_stage1_ep01.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 2 <span>Breach</span></h3>
+<a href="stage1/rmappo_7v3_stage1_ep02.png"><img src="stage1/rmappo_7v3_stage1_ep02.png" alt="Stage 1, 7v3, episode 2: Breach" loading="lazy"></a>
+<p>Seed 61001 · Captured 2/3 · 4.8 s</p>
+<p class="formats"><a href="stage1/rmappo_7v3_stage1_ep02.png">PNG</a> · <a href="stage1/rmappo_7v3_stage1_ep02.gif">GIF</a> · <a href="stage1/rmappo_7v3_stage1_ep02.pdf">PDF</a> · <a href="stage1/rmappo_7v3_stage1_ep02.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 3 <span>Success</span></h3>
+<a href="stage1/rmappo_7v3_stage1_ep03.png"><img src="stage1/rmappo_7v3_stage1_ep03.png" alt="Stage 1, 7v3, episode 3: Success" loading="lazy"></a>
+<p>Seed 61002 · Captured 3/3 · 2.6 s</p>
+<p class="formats"><a href="stage1/rmappo_7v3_stage1_ep03.png">PNG</a> · <a href="stage1/rmappo_7v3_stage1_ep03.gif">GIF</a> · <a href="stage1/rmappo_7v3_stage1_ep03.pdf">PDF</a> · <a href="stage1/rmappo_7v3_stage1_ep03.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 4 <span>Breach</span></h3>
+<a href="stage1/rmappo_7v3_stage1_ep04.png"><img src="stage1/rmappo_7v3_stage1_ep04.png" alt="Stage 1, 7v3, episode 4: Breach" loading="lazy"></a>
+<p>Seed 61003 · Captured 2/3 · 4.6 s</p>
+<p class="formats"><a href="stage1/rmappo_7v3_stage1_ep04.png">PNG</a> · <a href="stage1/rmappo_7v3_stage1_ep04.gif">GIF</a> · <a href="stage1/rmappo_7v3_stage1_ep04.pdf">PDF</a> · <a href="stage1/rmappo_7v3_stage1_ep04.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 5 <span>Success</span></h3>
+<a href="stage1/rmappo_7v3_stage1_ep05.png"><img src="stage1/rmappo_7v3_stage1_ep05.png" alt="Stage 1, 7v3, episode 5: Success" loading="lazy"></a>
+<p>Seed 61004 · Captured 3/3 · 4.5 s</p>
+<p class="formats"><a href="stage1/rmappo_7v3_stage1_ep05.png">PNG</a> · <a href="stage1/rmappo_7v3_stage1_ep05.gif">GIF</a> · <a href="stage1/rmappo_7v3_stage1_ep05.pdf">PDF</a> · <a href="stage1/rmappo_7v3_stage1_ep05.csv">CSV</a></p></article></div></section><section><h2>Stage 2 · 2v1</h2>
+<p>Successful episodes: 1. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage2/rmappo_2v1_stage2_ep01.png"><img src="stage2/rmappo_2v1_stage2_ep01.png" alt="Stage 2, 2v1, episode 1: Success" loading="lazy"></a>
+<p>Seed 61014 · Captured 1/1 · 3.5 s</p>
+<p class="formats"><a href="stage2/rmappo_2v1_stage2_ep01.png">PNG</a> · <a href="stage2/rmappo_2v1_stage2_ep01.gif">GIF</a> · <a href="stage2/rmappo_2v1_stage2_ep01.pdf">PDF</a> · <a href="stage2/rmappo_2v1_stage2_ep01.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 2 <span>Breach</span></h3>
+<a href="stage2/rmappo_2v1_stage2_ep02.png"><img src="stage2/rmappo_2v1_stage2_ep02.png" alt="Stage 2, 2v1, episode 2: Breach" loading="lazy"></a>
+<p>Seed 61015 · Captured 0/1 · 7.9 s</p>
+<p class="formats"><a href="stage2/rmappo_2v1_stage2_ep02.png">PNG</a> · <a href="stage2/rmappo_2v1_stage2_ep02.gif">GIF</a> · <a href="stage2/rmappo_2v1_stage2_ep02.pdf">PDF</a> · <a href="stage2/rmappo_2v1_stage2_ep02.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 3 <span>Breach</span></h3>
+<a href="stage2/rmappo_2v1_stage2_ep03.png"><img src="stage2/rmappo_2v1_stage2_ep03.png" alt="Stage 2, 2v1, episode 3: Breach" loading="lazy"></a>
+<p>Seed 61016 · Captured 0/1 · 6.3 s</p>
+<p class="formats"><a href="stage2/rmappo_2v1_stage2_ep03.png">PNG</a> · <a href="stage2/rmappo_2v1_stage2_ep03.gif">GIF</a> · <a href="stage2/rmappo_2v1_stage2_ep03.pdf">PDF</a> · <a href="stage2/rmappo_2v1_stage2_ep03.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 4 <span>Breach</span></h3>
+<a href="stage2/rmappo_2v1_stage2_ep04.png"><img src="stage2/rmappo_2v1_stage2_ep04.png" alt="Stage 2, 2v1, episode 4: Breach" loading="lazy"></a>
+<p>Seed 61017 · Captured 0/1 · 5.8 s</p>
+<p class="formats"><a href="stage2/rmappo_2v1_stage2_ep04.png">PNG</a> · <a href="stage2/rmappo_2v1_stage2_ep04.gif">GIF</a> · <a href="stage2/rmappo_2v1_stage2_ep04.pdf">PDF</a> · <a href="stage2/rmappo_2v1_stage2_ep04.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 5 <span>Breach</span></h3>
+<a href="stage2/rmappo_2v1_stage2_ep05.png"><img src="stage2/rmappo_2v1_stage2_ep05.png" alt="Stage 2, 2v1, episode 5: Breach" loading="lazy"></a>
+<p>Seed 61018 · Captured 0/1 · 20.4 s</p>
+<p class="formats"><a href="stage2/rmappo_2v1_stage2_ep05.png">PNG</a> · <a href="stage2/rmappo_2v1_stage2_ep05.gif">GIF</a> · <a href="stage2/rmappo_2v1_stage2_ep05.pdf">PDF</a> · <a href="stage2/rmappo_2v1_stage2_ep05.csv">CSV</a></p></article></div></section><section><h2>Stage 2 · 5v2</h2>
+<p>Successful episodes: 1, 2, 3, 4, 5. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage2/rmappo_5v2_stage2_ep01.png"><img src="stage2/rmappo_5v2_stage2_ep01.png" alt="Stage 2, 5v2, episode 1: Success" loading="lazy"></a>
+<p>Seed 61000 · Captured 2/2 · 3.0 s</p>
+<p class="formats"><a href="stage2/rmappo_5v2_stage2_ep01.png">PNG</a> · <a href="stage2/rmappo_5v2_stage2_ep01.gif">GIF</a> · <a href="stage2/rmappo_5v2_stage2_ep01.pdf">PDF</a> · <a href="stage2/rmappo_5v2_stage2_ep01.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 2 <span>Success</span></h3>
+<a href="stage2/rmappo_5v2_stage2_ep02.png"><img src="stage2/rmappo_5v2_stage2_ep02.png" alt="Stage 2, 5v2, episode 2: Success" loading="lazy"></a>
+<p>Seed 61001 · Captured 2/2 · 2.9 s</p>
+<p class="formats"><a href="stage2/rmappo_5v2_stage2_ep02.png">PNG</a> · <a href="stage2/rmappo_5v2_stage2_ep02.gif">GIF</a> · <a href="stage2/rmappo_5v2_stage2_ep02.pdf">PDF</a> · <a href="stage2/rmappo_5v2_stage2_ep02.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 3 <span>Success</span></h3>
+<a href="stage2/rmappo_5v2_stage2_ep03.png"><img src="stage2/rmappo_5v2_stage2_ep03.png" alt="Stage 2, 5v2, episode 3: Success" loading="lazy"></a>
+<p>Seed 61002 · Captured 2/2 · 2.4 s</p>
+<p class="formats"><a href="stage2/rmappo_5v2_stage2_ep03.png">PNG</a> · <a href="stage2/rmappo_5v2_stage2_ep03.gif">GIF</a> · <a href="stage2/rmappo_5v2_stage2_ep03.pdf">PDF</a> · <a href="stage2/rmappo_5v2_stage2_ep03.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 4 <span>Success</span></h3>
+<a href="stage2/rmappo_5v2_stage2_ep04.png"><img src="stage2/rmappo_5v2_stage2_ep04.png" alt="Stage 2, 5v2, episode 4: Success" loading="lazy"></a>
+<p>Seed 61003 · Captured 2/2 · 2.4 s</p>
+<p class="formats"><a href="stage2/rmappo_5v2_stage2_ep04.png">PNG</a> · <a href="stage2/rmappo_5v2_stage2_ep04.gif">GIF</a> · <a href="stage2/rmappo_5v2_stage2_ep04.pdf">PDF</a> · <a href="stage2/rmappo_5v2_stage2_ep04.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 5 <span>Success</span></h3>
+<a href="stage2/rmappo_5v2_stage2_ep05.png"><img src="stage2/rmappo_5v2_stage2_ep05.png" alt="Stage 2, 5v2, episode 5: Success" loading="lazy"></a>
+<p>Seed 61004 · Captured 2/2 · 2.4 s</p>
+<p class="formats"><a href="stage2/rmappo_5v2_stage2_ep05.png">PNG</a> · <a href="stage2/rmappo_5v2_stage2_ep05.gif">GIF</a> · <a href="stage2/rmappo_5v2_stage2_ep05.pdf">PDF</a> · <a href="stage2/rmappo_5v2_stage2_ep05.csv">CSV</a></p></article></div></section><section><h2>Stage 2 · 7v3</h2>
+<p>Successful episodes: 1, 4. 5 predetermined-seed episodes.</p>
+<div class="cards"><article class="card success">
+<h3>Episode 1 <span>Success</span></h3>
+<a href="stage2/rmappo_7v3_stage2_ep01.png"><img src="stage2/rmappo_7v3_stage2_ep01.png" alt="Stage 2, 7v3, episode 1: Success" loading="lazy"></a>
+<p>Seed 61003 · Captured 3/3 · 4.9 s</p>
+<p class="formats"><a href="stage2/rmappo_7v3_stage2_ep01.png">PNG</a> · <a href="stage2/rmappo_7v3_stage2_ep01.gif">GIF</a> · <a href="stage2/rmappo_7v3_stage2_ep01.pdf">PDF</a> · <a href="stage2/rmappo_7v3_stage2_ep01.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 2 <span>Breach</span></h3>
+<a href="stage2/rmappo_7v3_stage2_ep02.png"><img src="stage2/rmappo_7v3_stage2_ep02.png" alt="Stage 2, 7v3, episode 2: Breach" loading="lazy"></a>
+<p>Seed 61004 · Captured 1/3 · 4.7 s</p>
+<p class="formats"><a href="stage2/rmappo_7v3_stage2_ep02.png">PNG</a> · <a href="stage2/rmappo_7v3_stage2_ep02.gif">GIF</a> · <a href="stage2/rmappo_7v3_stage2_ep02.pdf">PDF</a> · <a href="stage2/rmappo_7v3_stage2_ep02.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 3 <span>Breach</span></h3>
+<a href="stage2/rmappo_7v3_stage2_ep03.png"><img src="stage2/rmappo_7v3_stage2_ep03.png" alt="Stage 2, 7v3, episode 3: Breach" loading="lazy"></a>
+<p>Seed 61005 · Captured 3/3 · 4.7 s</p>
+<p class="formats"><a href="stage2/rmappo_7v3_stage2_ep03.png">PNG</a> · <a href="stage2/rmappo_7v3_stage2_ep03.gif">GIF</a> · <a href="stage2/rmappo_7v3_stage2_ep03.pdf">PDF</a> · <a href="stage2/rmappo_7v3_stage2_ep03.csv">CSV</a></p></article><article class="card success">
+<h3>Episode 4 <span>Success</span></h3>
+<a href="stage2/rmappo_7v3_stage2_ep04.png"><img src="stage2/rmappo_7v3_stage2_ep04.png" alt="Stage 2, 7v3, episode 4: Success" loading="lazy"></a>
+<p>Seed 61006 · Captured 3/3 · 2.5 s</p>
+<p class="formats"><a href="stage2/rmappo_7v3_stage2_ep04.png">PNG</a> · <a href="stage2/rmappo_7v3_stage2_ep04.gif">GIF</a> · <a href="stage2/rmappo_7v3_stage2_ep04.pdf">PDF</a> · <a href="stage2/rmappo_7v3_stage2_ep04.csv">CSV</a></p></article><article class="card breach">
+<h3>Episode 5 <span>Breach</span></h3>
+<a href="stage2/rmappo_7v3_stage2_ep05.png"><img src="stage2/rmappo_7v3_stage2_ep05.png" alt="Stage 2, 7v3, episode 5: Breach" loading="lazy"></a>
+<p>Seed 61007 · Captured 1/3 · 4.7 s</p>
+<p class="formats"><a href="stage2/rmappo_7v3_stage2_ep05.png">PNG</a> · <a href="stage2/rmappo_7v3_stage2_ep05.gif">GIF</a> · <a href="stage2/rmappo_7v3_stage2_ep05.pdf">PDF</a> · <a href="stage2/rmappo_7v3_stage2_ep05.csv">CSV</a></p></article></div></section>
+<footer>Only artifacts named by the six current audited summaries are shown; historical _archive files are not scanned. Dynamics and rewards retain the repository implementation. Differences from the paper are recorded in each configuration's provenance metadata.</footer></html>

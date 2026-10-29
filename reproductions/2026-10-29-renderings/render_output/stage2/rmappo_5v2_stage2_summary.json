@@ -1,0 +1,895 @@
+{
+  "metadata": {
+    "kind": "native_renderer_independent_seeded_episodes",
+    "stage": 2,
+    "created_utc": "2026-10-29T09:17:36.139636+00:00",
+    "config": {
+      "algorithm_name": "rmappo",
+      "experiment_name": "check",
+      "seed": 1,
+      "cuda": true,
+      "cuda_deterministic": true,
+      "use_mps": true,
+      "n_training_threads": 1,
+      "n_rollout_threads": 1,
+      "n_eval_rollout_threads": 1,
+      "n_render_rollout_threads": 1,
+      "num_env_steps": 10000000.0,
+      "user_name": "marl",
+      "use_wandb": false,
+      "env_name": "MPE",
+      "use_obs_instead_of_state": false,
+      "episode_length": 300,
+      "share_policy": true,
+      "use_centralized_V": true,
+      "stacked_frames": 1,
+      "use_stacked_frames": false,
+      "hidden_size": 64,
+      "layer_N": 1,
+      "use_ReLU": true,
+      "use_popart": false,
+      "use_valuenorm": true,
+      "use_feature_normalization": true,
+      "use_orthogonal": true,
+      "gain": 0.01,
+      "use_naive_recurrent_policy": false,
+      "use_recurrent_policy": true,
+      "recurrent_N": 1,
+      "data_chunk_length": 10,
+      "lr": 0.0003,
+      "critic_lr": 0.0003,
+      "opti_eps": 1e-05,
+      "weight_decay": 0.0,
+      "kl_threshold": 0.01,
+      "ls_step": 10,
+      "accept_ratio": 0.5,
+      "ppo_epoch": 15,
+      "use_clipped_value_loss": true,
+      "clip_param": 0.2,
+      "num_mini_batch": 4,
+      "entropy_coef": 0.01,
+      "value_loss_coef": 1,
+      "use_max_grad_norm": true,
+      "max_grad_norm": 10.0,
+      "use_gae": true,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "use_proper_time_limits": false,
+      "use_huber_loss": true,
+      "use_value_active_masks": true,
+      "use_policy_active_masks": true,
+      "huber_delta": 10.0,
+      "use_linear_lr_decay": false,
+      "save_interval": 1,
+      "log_interval": 5,
+      "use_eval": false,
+      "eval_interval": 25,
+      "eval_episodes": 32,
+      "save_gifs": false,
+      "use_render": false,
+      "render_episodes": 5,
+      "ifi": 0.1,
+      "model_dir": null,
+      "encode_state": false,
+      "n_block": 1,
+      "n_embd": 64,
+      "n_head": 1,
+      "dec_actor": false,
+      "share_actor": false,
+      "train_maps": null,
+      "eval_maps": null,
+      "scenario_name": "protected_zone_stage2",
+      "num_defenders": 5,
+      "num_intruders": 2,
+      "num_agents": 7,
+      "protected_cx": 0.0,
+      "protected_cy": 0.0,
+      "protected_r": 0.5,
+      "world_r": 5.0,
+      "capture_r": 0.2,
+      "defender_max_speed": 1.0,
+      "intruder_max_speed": 1.0,
+      "capture_reward": 15.0,
+      "entry_penalty": -15.0,
+      "time_penalty": -0.01,
+      "vel_penalty": -0.001,
+      "distance_reward": 0.03,
+      "formation_reward": 0.08,
+      "threat_weight_reward": 0.02,
+      "intercept_reward": 0.05,
+      "use_stage1_rewards": true,
+      "cpf_num_particles": 512,
+      "cpf_sigma_a": 0.2,
+      "bearing_sigma0": 0.0262,
+      "bearing_r0": 0.5,
+      "threat_lambda": 0.15,
+      "threat_tau_max": 30.0,
+      "threat_tau_step": 1.0,
+      "tau_switch": 3.0,
+      "s1_logdet_weight": 0.5,
+      "s2_delta_weight": 1.0,
+      "intruder_sense_radius": 1.0,
+      "intruder_max_neighbors": 2
+    },
+    "worldparams": {
+      "dt": 0.1,
+      "episode_length": 300,
+      "protected_center": [
+        0.0,
+        0.0
+      ],
+      "agent_max_speeds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_r": 5.0,
+      "protected_r": 0.5,
+      "capture_r": 0.2,
+      "capture_reward": 15.0,
+      "entry_penalty": -15.0,
+      "bearing_sigma0": 0.0262,
+      "bearing_r0": 0.5,
+      "cpf_num_particles": 512,
+      "cpf_sigma_a": 0.2,
+      "threat_lambda": 0.15,
+      "threat_tau_max": 30.0,
+      "intruder_sense_radius": 1.0,
+      "intruder_max_neighbors": 2,
+      "retained_repository_extras": {
+        "damping": 0.15,
+        "_pz_time_penalty": -0.01,
+        "_pz_vel_penalty": -0.001,
+        "_pz_distance_reward": 0.03,
+        "_pz_formation_reward": 0.08,
+        "_pz_threat_weight_reward": 0.02,
+        "_pz_intercept_reward": 0.05,
+        "_cpf_init_pos_std": 1.0,
+        "_cpf_init_vel_std": 0.5,
+        "_cpf_init_acc_std": 0.2,
+        "_cpf_ess_ratio": 0.5,
+        "_threat_tau_step": 1.0
+      },
+      "config_matches_actual_world": true
+    },
+    "checkpoint_hashes": {
+      "defender_actor": {
+        "path": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models/defender_actor.pt",
+        "sha256": "3a18afa1d6d3cb8aca9918f8a7a503cebfcfa8e6c351983047cf1e96ca9d97b5",
+        "tensor_count": 21,
+        "strict": true,
+        "all_keys_match": true,
+        "all_shapes_match": true,
+        "all_tensor_values_equal": true,
+        "origin_main_blob": "66754c4fbba53541ab80604a27e85b61cabb2d1f",
+        "local_blob": "66754c4fbba53541ab80604a27e85b61cabb2d1f",
+        "matches_origin_main": true
+      },
+      "defender_critic": {
+        "path": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models/defender_critic.pt",
+        "sha256": "f18b0e941de8e4db7c241703b657098b02b22eee6d8514a4b28bd4de00e1aa06",
+        "tensor_count": 18,
+        "strict": true,
+        "all_keys_match": true,
+        "all_shapes_match": true,
+        "all_tensor_values_equal": true,
+        "origin_main_blob": "e99d4fe7ba3f1a9d4a72164b874457d7bc0cb33e",
+        "local_blob": "e99d4fe7ba3f1a9d4a72164b874457d7bc0cb33e",
+        "matches_origin_main": true
+      },
+      "intruder_actor": {
+        "path": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models/intruder_actor.pt",
+        "sha256": "10ae3b236138c4f9d90943b4f8aeca4d21c85e0edc0e2c490c4e9dd12020b1f0",
+        "tensor_count": 19,
+        "strict": true,
+        "all_keys_match": true,
+        "all_shapes_match": true,
+        "all_tensor_values_equal": true,
+        "origin_main_blob": "d5dc564e39abf3683cc3baaf2acabeea53ed9e7e",
+        "local_blob": "d5dc564e39abf3683cc3baaf2acabeea53ed9e7e",
+        "matches_origin_main": true
+      },
+      "intruder_critic": {
+        "path": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models/intruder_critic.pt",
+        "sha256": "fc7b70285be345a7c79ae923a273863631a26a0c60675981490eaeabe8dc4a04",
+        "tensor_count": 18,
+        "strict": true,
+        "all_keys_match": true,
+        "all_shapes_match": true,
+        "all_tensor_values_equal": true,
+        "origin_main_blob": "d46ed6588f361c1c57d2a1caa7be1870bf7b1237",
+        "local_blob": "d46ed6588f361c1c57d2a1caa7be1870bf7b1237",
+        "matches_origin_main": true
+      }
+    },
+    "model_dir": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models",
+    "base_seed": 61000,
+    "episode_seed_rule": "base_seed + episode - 1; reset Python/NumPy/PyTorch independently",
+    "requested_episodes": 5,
+    "renderer_args": {
+      "algo": "rmappo",
+      "defenders": 5,
+      "intruders": 2,
+      "run_id": "",
+      "model_dir": "results/MPE/protected_zone_stage2/rmappo/rmappo_5v2_stage2_/models",
+      "results_root": "results/MPE",
+      "episodes": 5,
+      "episode_length": 300,
+      "protected_r": 0.5,
+      "output_dir": "reproductions/2026-10-29-renderings/render_output/stage2",
+      "gif": true,
+      "gif_fps": 12,
+      "gif_stride": 2,
+      "dpi": 300,
+      "linewidth": 2.0,
+      "marker_size": 6.0,
+      "ellipse_interval": 5,
+      "ellipse_sigma": 3.0,
+      "bearing_sigma0": 0.0262,
+      "bearing_r0": 0.5,
+      "cpf_sigma_a": 0.2,
+      "pdf": true,
+      "csv": true,
+      "legend_fontsize": 10.0,
+      "label_fontsize": 10.0,
+      "seed": 61000,
+      "legend_loc": "paper"
+    },
+    "source": {
+      "git_commit": "a6b12d9aed9b9265d53ab28951ad24ae242e66a7",
+      "source_sha256": {
+        "scripts/render/render_protected_zone_stage2.py": "530516af4a59e672a43bd51162868355446f26a7ee7aa25ee6b251650f778693",
+        "utils/render_audit.py": "d7bcece10c5208c4d33118325385473404a829466ef78f539c0b8b09d2d8d262",
+        "config.py": "7c69142085a103edc78b4b16cf5e89bf5745dd33cad81ce2756c8280764430f9",
+        "envs/mpe/MPE_env.py": "e69fe9c7dc69796052e75c6275b4600a8be9ef8b7f93b2111b5b9f554b54bf8a",
+        "envs/mpe/environment.py": "9e50a443f2be8831efa8da1381e29953cc4e11b451144abb87382d6b51981593",
+        "envs/mpe/core.py": "13c0a69580d1ba38699f3aed56f04265908278257d1a57d968d5c50ef1020531",
+        "envs/mpe/scenarios/protected_zone_stage2.py": "5da40cb3d849dbc50734f7c5a32735300bbe8d58e1e4f0856e3167bffbb217ea",
+        "boa/cpf.py": "3dc73e8f7e92843c88278ef331cca4c9c3ecba213dcca21dcfb412e5da059fed",
+        "boa/threat.py": "566881186d778cfb476b29922db7eb3ff8cca81558c01d360380ee8fccdc4f5d",
+        "algorithms/r_mappo/algorithm/rMAPPOPolicy.py": "b15a8b19f8358eafc4625242493319227b7142d958f69fd7f28331151c71f90b",
+        "algorithms/r_mappo/algorithm/r_actor_critic.py": "8965c1ba9a6f032a5f9be7fd94c52154e07db0509a7671f5e1f608fbf429e416",
+        "algorithms/utils/act.py": "7df1bd78cb448ff86786136fb7103444b69fc044de8395e66203a629e4bfd22d",
+        "algorithms/utils/distributions.py": "ef4205f60533d39922f66ca201bc0ce1518494b811adf2334fde11b20de58f3d",
+        "algorithms/utils/mlp.py": "fd67f73b74be50d274dec7bac8e099e3a4af0a985211fce5da33f353352475cf",
+        "algorithms/utils/rnn.py": "559fd18afd61318360d744dabf45c294176b0bdc60491006cb2ec85e036e8f73"
+      }
+    },
+    "runtime": {
+      "device": "cpu",
+      "torch_threads": 1,
+      "torch_interop_threads": 1,
+      "executable": "python",
+      "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:20) [Clang 17.0.6 ]",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "versions": {
+        "torch": "2.1.0",
+        "numpy": "1.25.2",
+        "gymnasium": "0.28.1",
+        "matplotlib": "3.7.2"
+      }
+    },
+    "legend_location": "upper left",
+    "native_rollout_semantics": "StageI ignores discrete assignments; StageII uses original greedy rebalance; neither native collect uses training-runner action masks",
+    "notes": [
+      "All requested episodes are retained, including failures; no success-only screening.",
+      "Actual world parameters are checked against cfg; no training occurs during rendering.",
+      "Original native draw_static_episode and render_gif geometry/markers/styles are retained; legend location is configurable.",
+      "Native end markers represent the common last plotted frame, not individual capture-time positions of defenders.",
+      "Capture success requires returned defense success, every intruder captured within capture_r, and no sampled, segment or sticky breach, including terminal world state.",
+      "StageII radius1/K2 sensing is the original renderer default, not a parameter specified by paper tables; paper Eq34 describes global observations.",
+      "Released truth-assisted CPF initialization, MPE force integration, callback timing and reward differences are retained; no claim that all paper formulas are identical.",
+      "StageII native renderer does not execute training runner dense reward shaping; recorded tau_switch and dense weights do not imply online runner execution.",
+      "Archived checkpoint original training seed and complete training configuration are unknown."
+    ],
+    "publication": {
+      "base_repository_commit": "0f4c78c738d4be12a334f71f8cb9cc181dea6e73",
+      "original_summary_sha256": "b68f53178e18ea9222cf3ab73461cf1606e98f206a5b45b3663c10ffedb655ed",
+      "normalization": "Artifact and checkpoint references are repository-relative; local interpreter paths and backup inventories are excluded.",
+      "source_hash_note": "metadata.source records the original execution workspace and source hashes. Published scripts adapt imports, path discovery and English documentation; original core simulation files and checkpoint bytes are unchanged."
+    }
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "seed": 61000,
+      "verified_defense_success": true,
+      "all_captured": true,
+      "captured_ids": [
+        0,
+        1
+      ],
+      "attack_success": false,
+      "timeout": false,
+      "capture_events": [
+        {
+          "intruder_index": 0,
+          "step": 27,
+          "time": 2.7,
+          "defender_index": 1,
+          "distance": 0.15258661312540797,
+          "intruder_position": [
+            2.1588199138641357,
+            -1.1032562255859375
+          ],
+          "defender_position": [
+            2.1831462383270264,
+            -0.9526212215423584
+          ],
+          "zone_center_distance": 2.4243922371989406,
+          "zone_clearance": 1.9243922371989406
+        },
+        {
+          "intruder_index": 1,
+          "step": 29,
+          "time": 2.9000000000000004,
+          "defender_index": 2,
+          "distance": 0.19178141427954637,
+          "intruder_position": [
+            1.1356273889541626,
+            -1.8109571933746338
+          ],
+          "defender_position": [
+            0.9735019207000732,
+            -1.9134044647216797
+          ],
+          "zone_center_distance": 2.137572343285293,
+          "zone_clearance": 1.637572343285293
+        }
+      ],
+      "capture_distances_valid": true,
+      "native_stats": {
+        "length": 30,
+        "defense_success": 1.0,
+        "attack_success": 0.0,
+        "captures": 2.0
+      },
+      "returned_defense_success": true,
+      "returned_attack_success": false,
+      "terminal_step": 30,
+      "plot_frame_count": 30,
+      "final_positions": [
+        [
+          2.588730812072754,
+          -0.8462309837341309
+        ],
+        [
+          2.082772970199585,
+          -0.7688990831375122
+        ],
+        [
+          0.9180371165275574,
+          -1.9966130256652832
+        ],
+        [
+          1.3632221221923828,
+          -2.2998173236846924
+        ],
+        [
+          2.031977415084839,
+          -2.3282361030578613
+        ],
+        [
+          2.1588199138641357,
+          -1.1032562255859375
+        ],
+        [
+          1.1356273889541626,
+          -1.8109571933746338
+        ]
+      ],
+      "final_nearest_defender_distances_by_intruder": [
+        0.34289624720459677,
+        0.2860307933041791
+      ],
+      "min_sampled_clearance_by_intruder": [
+        1.9243922371989406,
+        1.637572343285293
+      ],
+      "min_segment_clearance_by_intruder": [
+        1.9243922371989406,
+        1.637572343285293
+      ],
+      "cumulative_sticky_breach": false,
+      "sampled_position_breach": false,
+      "interpolated_segment_breach": false,
+      "native_frames_match_audit_states": true,
+      "terminal_state_note": "Native plot frames precede step; separately audited terminal world is exported only as terminal_agent CSV rows",
+      "files": {
+        "png": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.png",
+        "gif": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.gif",
+        "csv": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.csv",
+        "pdf": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep01.pdf"
+      },
+      "file_sha256": {
+        "png": "033f4b248b7ce78ad0ef072778012aeeafaeb8572b2cce61dbfb2fec3656623d",
+        "gif": "11ebf4c0d6262dea97823662eada2b3b2b1043b3c563954ce0bf9d8c31cde37f",
+        "csv": "5fd116a830bc21cc2892e50a1143978fe19b2f94633feb559fc54693420f9852",
+        "pdf": "5dd0992293e0a27a8ae35d2b82873bf4ff33fa0412aeb7a7b0bd16e9e560bc6d"
+      }
+    },
+    {
+      "episode": 2,
+      "seed": 61001,
+      "verified_defense_success": true,
+      "all_captured": true,
+      "captured_ids": [
+        0,
+        1
+      ],
+      "attack_success": false,
+      "timeout": false,
+      "capture_events": [
+        {
+          "intruder_index": 1,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 0,
+          "distance": 0.19645194217794784,
+          "intruder_position": [
+            2.9247004985809326,
+            0.13768544793128967
+          ],
+          "defender_position": [
+            2.7595691680908203,
+            0.24410447478294373
+          ],
+          "zone_center_distance": 2.9279395979035487,
+          "zone_clearance": 2.4279395979035487
+        },
+        {
+          "intruder_index": 0,
+          "step": 28,
+          "time": 2.8000000000000003,
+          "defender_index": 3,
+          "distance": 0.1928463693535726,
+          "intruder_position": [
+            -2.9471044540405273,
+            -1.7588622570037842
+          ],
+          "defender_position": [
+            -2.7542901039123535,
+            -1.7553482055664062
+          ],
+          "zone_center_distance": 3.4320578523879752,
+          "zone_clearance": 2.9320578523879752
+        }
+      ],
+      "capture_distances_valid": true,
+      "native_stats": {
+        "length": 29,
+        "defense_success": 1.0,
+        "attack_success": 0.0,
+        "captures": 2.0
+      },
+      "returned_defense_success": true,
+      "returned_attack_success": false,
+      "terminal_step": 29,
+      "plot_frame_count": 29,
+      "final_positions": [
+        [
+          3.3261802196502686,
+          0.10946623980998993
+        ],
+        [
+          2.6675424575805664,
+          -0.1290576457977295
+        ],
+        [
+          -2.42006516456604,
+          -1.8440788984298706
+        ],
+        [
+          -2.852938652038574,
+          -1.7717328071594238
+        ],
+        [
+          3.0743248462677,
+          -0.029465023428201675
+        ],
+        [
+          -2.9471044540405273,
+          -1.7588622570037842
+        ],
+        [
+          2.9247004985809326,
+          0.13768544793128967
+        ]
+      ],
+      "final_nearest_defender_distances_by_intruder": [
+        0.09504130327378657,
+        0.2243361885572429
+      ],
+      "min_sampled_clearance_by_intruder": [
+        2.9320578523879752,
+        2.4279395979035487
+      ],
+      "min_segment_clearance_by_intruder": [
+        2.9320578523879752,
+        2.4279395979035487
+      ],
+      "cumulative_sticky_breach": false,
+      "sampled_position_breach": false,
+      "interpolated_segment_breach": false,
+      "native_frames_match_audit_states": true,
+      "terminal_state_note": "Native plot frames precede step; separately audited terminal world is exported only as terminal_agent CSV rows",
+      "files": {
+        "png": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.png",
+        "gif": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.gif",
+        "csv": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.csv",
+        "pdf": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep02.pdf"
+      },
+      "file_sha256": {
+        "png": "80e1183f30b4e57f2c479e6e8be5a038cf09aa3e99ec3deb54ff97229585007c",
+        "gif": "5b31416de9021ce071811a6f6ad2a3561763b66590765a55dfd725dcef52f3ac",
+        "csv": "7030b4d5ac96ed37ee4190631002ba857d8bbb672320a280cad26915f57d8a76",
+        "pdf": "4baefaed8297ba4097a9f346c725b6b0c7dc3bd7472f83782d50c1a5bd0a1338"
+      }
+    },
+    {
+      "episode": 3,
+      "seed": 61002,
+      "verified_defense_success": true,
+      "all_captured": true,
+      "captured_ids": [
+        0,
+        1
+      ],
+      "attack_success": false,
+      "timeout": false,
+      "capture_events": [
+        {
+          "intruder_index": 0,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 0,
+          "distance": 0.17473799964233788,
+          "intruder_position": [
+            2.7237467765808105,
+            -0.9207446575164795
+          ],
+          "defender_position": [
+            2.5603368282318115,
+            -0.8588531613349915
+          ],
+          "zone_center_distance": 2.875163860944189,
+          "zone_clearance": 2.375163860944189
+        },
+        {
+          "intruder_index": 1,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 2,
+          "distance": 0.07903575700751277,
+          "intruder_position": [
+            -2.6944022178649902,
+            0.47890186309814453
+          ],
+          "defender_position": [
+            -2.615457773208618,
+            0.4751037657260895
+          ],
+          "zone_center_distance": 2.736631196583612,
+          "zone_clearance": 2.236631196583612
+        }
+      ],
+      "capture_distances_valid": true,
+      "native_stats": {
+        "length": 24,
+        "defense_success": 1.0,
+        "attack_success": 0.0,
+        "captures": 2.0
+      },
+      "returned_defense_success": true,
+      "returned_attack_success": false,
+      "terminal_step": 24,
+      "plot_frame_count": 24,
+      "final_positions": [
+        [
+          2.660249710083008,
+          -0.8546819090843201
+        ],
+        [
+          -1.8839316368103027,
+          0.17464673519134521
+        ],
+        [
+          -2.7153658866882324,
+          0.47081834077835083
+        ],
+        [
+          -2.6320228576660156,
+          0.42239949107170105
+        ],
+        [
+          2.527104139328003,
+          -0.9203152656555176
+        ],
+        [
+          2.7237467765808105,
+          -0.9207446575164795
+        ],
+        [
+          -2.6944022178649902,
+          0.47890186309814453
+        ]
+      ],
+      "final_nearest_defender_distances_by_intruder": [
+        0.09163058541904644,
+        0.022468171790895212
+      ],
+      "min_sampled_clearance_by_intruder": [
+        2.375163860944189,
+        2.236631196583612
+      ],
+      "min_segment_clearance_by_intruder": [
+        2.375163860944189,
+        2.236631196583612
+      ],
+      "cumulative_sticky_breach": false,
+      "sampled_position_breach": false,
+      "interpolated_segment_breach": false,
+      "native_frames_match_audit_states": true,
+      "terminal_state_note": "Native plot frames precede step; separately audited terminal world is exported only as terminal_agent CSV rows",
+      "files": {
+        "png": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.png",
+        "gif": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.gif",
+        "csv": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.csv",
+        "pdf": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep03.pdf"
+      },
+      "file_sha256": {
+        "png": "0d2977e8317896432be1c4d4e257b614ebcb102dc9ea1b6938f2605274b5be53",
+        "gif": "8c7392934276941e0248f24e7b3d925973d31ed3b79d2883bac951e9a42d363d",
+        "csv": "c0080cc1d98073b411b060f9ed1334724a12c22cc339a3ad3502bf6e7b82d040",
+        "pdf": "eaf3f7aa18143dacfe1ba76572ac26882d351ca7ed7deb719e647c5a172d040a"
+      }
+    },
+    {
+      "episode": 4,
+      "seed": 61003,
+      "verified_defense_success": true,
+      "all_captured": true,
+      "captured_ids": [
+        0,
+        1
+      ],
+      "attack_success": false,
+      "timeout": false,
+      "capture_events": [
+        {
+          "intruder_index": 0,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 2,
+          "distance": 0.06143073277819711,
+          "intruder_position": [
+            -2.258988857269287,
+            1.528756856918335
+          ],
+          "defender_position": [
+            -2.238980293273926,
+            1.4706759452819824
+          ],
+          "zone_center_distance": 2.7276598367174794,
+          "zone_clearance": 2.2276598367174794
+        },
+        {
+          "intruder_index": 1,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 2,
+          "distance": 0.17607765581193185,
+          "intruder_position": [
+            -2.3761706352233887,
+            1.3603031635284424
+          ],
+          "defender_position": [
+            -2.238980293273926,
+            1.4706759452819824
+          ],
+          "zone_center_distance": 2.7379940804178906,
+          "zone_clearance": 2.2379940804178906
+        }
+      ],
+      "capture_distances_valid": true,
+      "native_stats": {
+        "length": 24,
+        "defense_success": 1.0,
+        "attack_success": 0.0,
+        "captures": 2.0
+      },
+      "returned_defense_success": true,
+      "returned_attack_success": false,
+      "terminal_step": 24,
+      "plot_frame_count": 24,
+      "final_positions": [
+        [
+          -1.5841983556747437,
+          0.8648656606674194
+        ],
+        [
+          -2.00107741355896,
+          1.2775793075561523
+        ],
+        [
+          -2.3377416133880615,
+          1.4549847841262817
+        ],
+        [
+          -2.307882070541382,
+          0.9531552791595459
+        ],
+        [
+          -1.8084856271743774,
+          0.8592321872711182
+        ],
+        [
+          -2.258988857269287,
+          1.528756856918335
+        ],
+        [
+          -2.3761706352233887,
+          1.3603031635284424
+        ]
+      ],
+      "final_nearest_defender_distances_by_intruder": [
+        0.10790882874139243,
+        0.10218316396673793
+      ],
+      "min_sampled_clearance_by_intruder": [
+        2.2276598367174794,
+        2.2379940804178906
+      ],
+      "min_segment_clearance_by_intruder": [
+        2.2276598367174794,
+        2.2379940804178906
+      ],
+      "cumulative_sticky_breach": false,
+      "sampled_position_breach": false,
+      "interpolated_segment_breach": false,
+      "native_frames_match_audit_states": true,
+      "terminal_state_note": "Native plot frames precede step; separately audited terminal world is exported only as terminal_agent CSV rows",
+      "files": {
+        "png": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.png",
+        "gif": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.gif",
+        "csv": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.csv",
+        "pdf": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep04.pdf"
+      },
+      "file_sha256": {
+        "png": "b1ad84593aa39fc94fdc2746dcd75a92bb09f0ce357331cf3415c1db1b85d650",
+        "gif": "61abdcba0eb966f0284875269644c4b37b328c72fbffd0563a16b7fdef40743b",
+        "csv": "5437e6b6497302826db2ce2154732350381d8e2bb8f793c0d7971d2704fb95fe",
+        "pdf": "db8ff7b2b4ec224ba8d431a893df08e962511254424514eb83625f3dbf404e75"
+      }
+    },
+    {
+      "episode": 5,
+      "seed": 61004,
+      "verified_defense_success": true,
+      "all_captured": true,
+      "captured_ids": [
+        0,
+        1
+      ],
+      "attack_success": false,
+      "timeout": false,
+      "capture_events": [
+        {
+          "intruder_index": 0,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 2,
+          "distance": 0.05176246841597057,
+          "intruder_position": [
+            -1.253812313079834,
+            2.392338514328003
+          ],
+          "defender_position": [
+            -1.2445980310440063,
+            2.341402769088745
+          ],
+          "zone_center_distance": 2.7009866500165676,
+          "zone_clearance": 2.2009866500165676
+        },
+        {
+          "intruder_index": 1,
+          "step": 23,
+          "time": 2.3000000000000003,
+          "defender_index": 1,
+          "distance": 0.15968379664530163,
+          "intruder_position": [
+            0.36680400371551514,
+            2.739797353744507
+          ],
+          "defender_position": [
+            0.24914886057376862,
+            2.631833553314209
+          ],
+          "zone_center_distance": 2.7642421595669098,
+          "zone_clearance": 2.2642421595669098
+        }
+      ],
+      "capture_distances_valid": true,
+      "native_stats": {
+        "length": 24,
+        "defense_success": 1.0,
+        "attack_success": 0.0,
+        "captures": 2.0
+      },
+      "returned_defense_success": true,
+      "returned_attack_success": false,
+      "terminal_step": 24,
+      "plot_frame_count": 24,
+      "final_positions": [
+        [
+          0.3773761987686157,
+          2.4627349376678467
+        ],
+        [
+          0.2979586124420166,
+          2.7191123962402344
+        ],
+        [
+          -1.2329163551330566,
+          2.440718173980713
+        ],
+        [
+          -0.733748733997345,
+          2.1177961826324463
+        ],
+        [
+          0.30977270007133484,
+          1.8939605951309204
+        ],
+        [
+          -1.253812313079834,
+          2.392338514328003
+        ],
+        [
+          0.36680400371551514,
+          2.739797353744507
+        ]
+      ],
+      "final_nearest_defender_distances_by_intruder": [
+        0.052699454708996174,
+        0.07188571044758942
+      ],
+      "min_sampled_clearance_by_intruder": [
+        2.2009866500165676,
+        2.2642421595669098
+      ],
+      "min_segment_clearance_by_intruder": [
+        2.2009866500165676,
+        2.2642421595669098
+      ],
+      "cumulative_sticky_breach": false,
+      "sampled_position_breach": false,
+      "interpolated_segment_breach": false,
+      "native_frames_match_audit_states": true,
+      "terminal_state_note": "Native plot frames precede step; separately audited terminal world is exported only as terminal_agent CSV rows",
+      "files": {
+        "png": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.png",
+        "gif": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.gif",
+        "csv": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.csv",
+        "pdf": "reproductions/2026-10-29-renderings/render_output/stage2/rmappo_5v2_stage2_ep05.pdf"
+      },
+      "file_sha256": {
+        "png": "722ce2ddd711a707a253f169003886329a27ddc7218c899fe3d1e666cec4535c",
+        "gif": "3be44c91377f0b0ac5e74f93534fb1da0b1107542f7f1cefe250aa2b4d79bb7a",
+        "csv": "f76e862aae74149f3b938e40f3166b37bab6ff43b2395cbbe80230e95424dcad",
+        "pdf": "cacad0b1a0badd1c69bda2435d8a0232a91d128bb8fad89438d617452df91a1c"
+      }
+    }
+  ],
+  "success_episodes": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}
